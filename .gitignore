@@ -6,9 +6,21 @@
 *.xcuserstate
 DerivedData/
 build/
+**/.build/
+.swiftpm/
 
 # CocoaPods generated dependencies
 Pods/
 
 # Local secrets
 EatWhat/Configs/LocalSecrets.xcconfig
+
+# Backend (NestJS/Prisma)
+backend/apps/api/node_modules/
+backend/apps/api/dist/
+backend/apps/api/.env
+backend/apps/api/.env.*
+!backend/apps/api/.env.example
+backend/apps/api/coverage/
+backend/apps/api/*.log
+backend/apps/api/prisma/schema.prisma.bak
