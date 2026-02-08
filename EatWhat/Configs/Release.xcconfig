@@ -1,3 +1,5 @@
 #include? "../../Pods/Target Support Files/Pods-EatWhat/Pods-EatWhat.release.xcconfig"
 
+CAMPUS_MENU_API_BASE_URL =
+
 #include? "LocalSecrets.xcconfig"

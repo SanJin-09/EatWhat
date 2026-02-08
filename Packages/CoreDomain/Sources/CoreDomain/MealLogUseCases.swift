@@ -76,11 +76,18 @@ private func normalized(_ input: NewMealLogInput) throws -> NewMealLogInput {
         throw MealLogDomainError.invalidInput
     }
 
+    if let nutrition = input.nutrition, !nutrition.isValid {
+        throw MealLogDomainError.invalidInput
+    }
+
     return NewMealLogInput(
         date: input.date,
         mealType: input.mealType,
+        storeId: input.storeId,
+        dishId: input.dishId,
         storeName: storeName,
         dishName: dishName,
-        price: input.price
+        price: input.price,
+        nutrition: input.nutrition
     )
 }

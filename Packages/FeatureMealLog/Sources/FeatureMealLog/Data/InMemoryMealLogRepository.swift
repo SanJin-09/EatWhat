@@ -18,9 +18,12 @@ public actor InMemoryMealLogRepository: MealLogRepository {
             id: UUID(),
             date: input.date,
             mealType: input.mealType,
+            storeId: input.storeId,
+            dishId: input.dishId,
             storeName: input.storeName,
             dishName: input.dishName,
-            price: input.price
+            price: input.price,
+            nutrition: input.nutrition
         )
         mealLogs.insert(log, at: 0)
         mealLogs.sort { $0.date > $1.date }
@@ -36,9 +39,12 @@ public actor InMemoryMealLogRepository: MealLogRepository {
             id: id,
             date: input.date,
             mealType: input.mealType,
+            storeId: input.storeId,
+            dishId: input.dishId,
             storeName: input.storeName,
             dishName: input.dishName,
-            price: input.price
+            price: input.price,
+            nutrition: input.nutrition
         )
         mealLogs[index] = updated
         mealLogs.sort { $0.date > $1.date }

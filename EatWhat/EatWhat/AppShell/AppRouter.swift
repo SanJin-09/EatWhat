@@ -44,7 +44,10 @@ struct AppRouterView: View {
                 }
                 .tag(AppTab.home)
 
-            MealLogHomeView(viewModel: mealLogViewModel)
+            MealLogHomeView(
+                viewModel: mealLogViewModel,
+                campusMenuRepository: container.makeCampusMenuRepository()
+            )
                 .tabItem {
                     Label(AppTab.logs.title, systemImage: AppTab.logs.systemImage)
                 }

@@ -22,6 +22,8 @@
 	<true/>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>用于定位你在校内的位置，并展示南京信息工程大学范围内店铺。</string>
+	<key>CampusMenuAPIBaseURL</key>
+	<string>$(CAMPUS_MENU_API_BASE_URL)</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

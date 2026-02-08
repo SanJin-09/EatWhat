@@ -16,6 +16,7 @@ let package = Package(
         .package(path: "../CoreDomain"),
         .package(path: "../CoreStorage"),
         .package(path: "../CoreAnalytics"),
+        .package(path: "../CoreNetworking"),
     ],
     targets: [
         .target(
@@ -24,6 +25,7 @@ let package = Package(
                 "CoreDomain",
                 "CoreStorage",
                 "CoreAnalytics",
+                "CoreNetworking",
             ]
         ),
         .testTarget(
