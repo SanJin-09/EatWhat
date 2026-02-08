@@ -1,0 +1,1605 @@
+{
+  "builtTestProducts" : [
+    {
+      "binaryPath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/FeatureMealLogPackageTests.xctest/Contents/MacOS/FeatureMealLogPackageTests",
+      "packagePath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog",
+      "productName" : "FeatureMealLogPackageTests"
+    }
+  ],
+  "copyCommands" : {
+
+  },
+  "explicitTargetDependencyImportCheckingMode" : {
+    "none" : {
+
+    }
+  },
+  "generatedSourceTargetSet" : [
+
+  ],
+  "pluginDescriptions" : [
+
+  ],
+  "swiftCommands" : {
+    "C.CoreAnalytics-arm64-apple-macosx26.0-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreAnalytics.build/sources",
+      "importPath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreAnalytics/Sources/CoreAnalytics/CoreAnalytics.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/Modules/CoreFoundationKit.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/Modules/CoreNetworking.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreAnalytics.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "CoreAnalytics",
+      "moduleOutputPath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/Modules/CoreAnalytics.swiftmodule",
+      "objects" : [
+        "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreAnalytics.build/CoreAnalytics.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx10.13",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreAnalytics.build/include/CoreAnalytics-Swift.h",
+        "-swift-version",
+        "5",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "coreanalytics"
+      ],
+      "outputFileMapPath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreAnalytics.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreAnalytics.build/CoreAnalytics.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/Modules/CoreAnalytics.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreAnalytics/Sources/CoreAnalytics/CoreAnalytics.swift"
+      ],
+      "tempsPath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreAnalytics.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.CoreDomain-arm64-apple-macosx26.0-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreDomain.build/sources",
+      "importPath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/Sources/CoreDomain/CoreDomain.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/Modules/CoreFoundationKit.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreDomain.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "CoreDomain",
+      "moduleOutputPath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/Modules/CoreDomain.swiftmodule",
+      "objects" : [
+        "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreDomain.build/CoreDomain.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx10.13",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreDomain.build/include/CoreDomain-Swift.h",
+        "-swift-version",
+        "5",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "coredomain"
+      ],
+      "outputFileMapPath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreDomain.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreDomain.build/CoreDomain.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/Modules/CoreDomain.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/Sources/CoreDomain/CoreDomain.swift"
+      ],
+      "tempsPath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreDomain.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.CoreFoundationKit-arm64-apple-macosx26.0-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreFoundationKit.build/sources",
+      "importPath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/Sources/CoreFoundationKit/CoreFoundationKit.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreFoundationKit.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "CoreFoundationKit",
+      "moduleOutputPath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/Modules/CoreFoundationKit.swiftmodule",
+      "objects" : [
+        "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreFoundationKit.build/CoreFoundationKit.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx10.13",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreFoundationKit.build/include/CoreFoundationKit-Swift.h",
+        "-swift-version",
+        "5",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "corefoundationkit"
+      ],
+      "outputFileMapPath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreFoundationKit.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreFoundationKit.build/CoreFoundationKit.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/Modules/CoreFoundationKit.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/Sources/CoreFoundationKit/CoreFoundationKit.swift"
+      ],
+      "tempsPath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreFoundationKit.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.CoreNetworking-arm64-apple-macosx26.0-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreNetworking.build/sources",
+      "importPath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreNetworking/Sources/CoreNetworking/CoreNetworking.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/Modules/CoreFoundationKit.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreNetworking.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "CoreNetworking",
+      "moduleOutputPath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/Modules/CoreNetworking.swiftmodule",
+      "objects" : [
+        "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreNetworking.build/CoreNetworking.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx10.13",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreNetworking.build/include/CoreNetworking-Swift.h",
+        "-swift-version",
+        "5",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "corenetworking"
+      ],
+      "outputFileMapPath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreNetworking.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreNetworking.build/CoreNetworking.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/Modules/CoreNetworking.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreNetworking/Sources/CoreNetworking/CoreNetworking.swift"
+      ],
+      "tempsPath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreNetworking.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.CoreStorage-arm64-apple-macosx26.0-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreStorage.build/sources",
+      "importPath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreStorage/Sources/CoreStorage/CoreStorage.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/Modules/CoreFoundationKit.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreStorage.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "CoreStorage",
+      "moduleOutputPath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/Modules/CoreStorage.swiftmodule",
+      "objects" : [
+        "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreStorage.build/CoreStorage.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx10.13",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreStorage.build/include/CoreStorage-Swift.h",
+        "-swift-version",
+        "5",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "corestorage"
+      ],
+      "outputFileMapPath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreStorage.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreStorage.build/CoreStorage.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/Modules/CoreStorage.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreStorage/Sources/CoreStorage/CoreStorage.swift"
+      ],
+      "tempsPath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreStorage.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.FeatureMealLog-arm64-apple-macosx26.0-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/FeatureMealLog.build/sources",
+      "importPath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/Sources/FeatureMealLog/FeatureMealLog.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/Modules/CoreDomain.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/Modules/CoreStorage.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/Modules/CoreAnalytics.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/FeatureMealLog.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "FeatureMealLog",
+      "moduleOutputPath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/Modules/FeatureMealLog.swiftmodule",
+      "objects" : [
+        "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/FeatureMealLog.build/FeatureMealLog.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx10.13",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/FeatureMealLog.build/include/FeatureMealLog-Swift.h",
+        "-swift-version",
+        "5",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "featuremeallog"
+      ],
+      "outputFileMapPath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/FeatureMealLog.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/FeatureMealLog.build/FeatureMealLog.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/Modules/FeatureMealLog.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/Sources/FeatureMealLog/FeatureMealLog.swift"
+      ],
+      "tempsPath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/FeatureMealLog.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.FeatureMealLogPackageTests-arm64-apple-macosx26.0-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/FeatureMealLogPackageTests.build/sources",
+      "importPath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/FeatureMealLogPackageTests.derived/runner.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/Modules/FeatureMealLogTests.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/FeatureMealLogPackageTests.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "FeatureMealLogPackageTests",
+      "moduleOutputPath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/Modules/FeatureMealLogPackageTests.swiftmodule",
+      "objects" : [
+        "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/FeatureMealLogPackageTests.build/runner.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx10.13",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-Xfrontend",
+        "-enable-cross-import-overlays",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/FeatureMealLogPackageTests.build/include/FeatureMealLogPackageTests-Swift.h",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "featuremeallog"
+      ],
+      "outputFileMapPath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/FeatureMealLogPackageTests.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/FeatureMealLogPackageTests.build/runner.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/Modules/FeatureMealLogPackageTests.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/FeatureMealLogPackageTests.derived/runner.swift"
+      ],
+      "tempsPath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/FeatureMealLogPackageTests.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.FeatureMealLogTests-arm64-apple-macosx26.0-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/FeatureMealLogTests.build/sources",
+      "importPath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/Tests/FeatureMealLogTests/FeatureMealLogTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/Modules/FeatureMealLog.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/FeatureMealLogTests.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "FeatureMealLogTests",
+      "moduleOutputPath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/Modules/FeatureMealLogTests.swiftmodule",
+      "objects" : [
+        "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/FeatureMealLogTests.build/FeatureMealLogTests.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx14.0",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-Xfrontend",
+        "-enable-cross-import-overlays",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-swift-version",
+        "5",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "featuremeallog"
+      ],
+      "outputFileMapPath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/FeatureMealLogTests.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/FeatureMealLogTests.build/FeatureMealLogTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/Modules/FeatureMealLogTests.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/Tests/FeatureMealLogTests/FeatureMealLogTests.swift"
+      ],
+      "tempsPath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/FeatureMealLogTests.build",
+      "wholeModuleOptimization" : false
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "swiftTargetScanArgs" : {
+    "CoreAnalytics" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "CoreAnalytics",
+      "-package-name",
+      "coreanalytics",
+      "-c",
+      "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreAnalytics/Sources/CoreAnalytics/CoreAnalytics.swift",
+      "-I",
+      "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx10.13",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-j10",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreAnalytics.build/include/CoreAnalytics-Swift.h",
+      "-swift-version",
+      "5",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "coreanalytics",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "CoreDomain" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "CoreDomain",
+      "-package-name",
+      "coredomain",
+      "-c",
+      "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/Sources/CoreDomain/CoreDomain.swift",
+      "-I",
+      "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx10.13",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-j10",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreDomain.build/include/CoreDomain-Swift.h",
+      "-swift-version",
+      "5",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "coredomain",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "CoreFoundationKit" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "CoreFoundationKit",
+      "-package-name",
+      "corefoundationkit",
+      "-c",
+      "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/Sources/CoreFoundationKit/CoreFoundationKit.swift",
+      "-I",
+      "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx10.13",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-j10",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreFoundationKit.build/include/CoreFoundationKit-Swift.h",
+      "-swift-version",
+      "5",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "corefoundationkit",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "CoreNetworking" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "CoreNetworking",
+      "-package-name",
+      "corenetworking",
+      "-c",
+      "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreNetworking/Sources/CoreNetworking/CoreNetworking.swift",
+      "-I",
+      "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx10.13",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-j10",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreNetworking.build/include/CoreNetworking-Swift.h",
+      "-swift-version",
+      "5",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "corenetworking",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "CoreStorage" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "CoreStorage",
+      "-package-name",
+      "corestorage",
+      "-c",
+      "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreStorage/Sources/CoreStorage/CoreStorage.swift",
+      "-I",
+      "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx10.13",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-j10",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreStorage.build/include/CoreStorage-Swift.h",
+      "-swift-version",
+      "5",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "corestorage",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "FeatureMealLog" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "FeatureMealLog",
+      "-package-name",
+      "featuremeallog",
+      "-c",
+      "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/Sources/FeatureMealLog/FeatureMealLog.swift",
+      "-I",
+      "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx10.13",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-j10",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/FeatureMealLog.build/include/FeatureMealLog-Swift.h",
+      "-swift-version",
+      "5",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "featuremeallog",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "FeatureMealLogPackageTests" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "FeatureMealLogPackageTests",
+      "-package-name",
+      "featuremeallog",
+      "-c",
+      "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/FeatureMealLogPackageTests.derived/runner.swift",
+      "-I",
+      "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx10.13",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-Xfrontend",
+      "-enable-cross-import-overlays",
+      "-j10",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/FeatureMealLogPackageTests.build/include/FeatureMealLogPackageTests-Swift.h",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "featuremeallog",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "FeatureMealLogTests" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "FeatureMealLogTests",
+      "-package-name",
+      "featuremeallog",
+      "-c",
+      "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/Tests/FeatureMealLogTests/FeatureMealLogTests.swift",
+      "-I",
+      "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx14.0",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-Xfrontend",
+      "-enable-cross-import-overlays",
+      "-j10",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-swift-version",
+      "5",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "featuremeallog",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ]
+  },
+  "targetDependencyMap" : {
+    "CoreAnalytics" : [
+      "CoreNetworking",
+      "CoreFoundationKit"
+    ],
+    "CoreDomain" : [
+      "CoreFoundationKit"
+    ],
+    "CoreFoundationKit" : [
+
+    ],
+    "CoreNetworking" : [
+      "CoreFoundationKit"
+    ],
+    "CoreStorage" : [
+      "CoreFoundationKit"
+    ],
+    "FeatureMealLog" : [
+      "CoreAnalytics",
+      "CoreNetworking",
+      "CoreStorage",
+      "CoreDomain",
+      "CoreFoundationKit"
+    ],
+    "FeatureMealLogPackageTests" : [
+      "FeatureMealLogTests",
+      "FeatureMealLog",
+      "CoreAnalytics",
+      "CoreNetworking",
+      "CoreStorage",
+      "CoreDomain",
+      "CoreFoundationKit"
+    ],
+    "FeatureMealLogTests" : [
+      "FeatureMealLog",
+      "CoreAnalytics",
+      "CoreNetworking",
+      "CoreStorage",
+      "CoreDomain",
+      "CoreFoundationKit"
+    ]
+  },
+  "testDiscoveryCommands" : {
+
+  },
+  "testEntryPointCommands" : {
+    "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/FeatureMealLogPackageTests.derived/runner.swift" : {
+      "inputs" : [
+
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/FeatureMealLogPackageTests.derived/runner.swift"
+        }
+      ]
+    }
+  },
+  "traitConfiguration" : {
+    "default" : {
+
+    }
+  },
+  "writeCommands" : {
+    "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreAnalytics.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreAnalytics/Sources/CoreAnalytics/CoreAnalytics.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreAnalytics.build/sources"
+    },
+    "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreDomain.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/Sources/CoreDomain/CoreDomain.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreDomain.build/sources"
+    },
+    "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreFoundationKit.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/Sources/CoreFoundationKit/CoreFoundationKit.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreFoundationKit.build/sources"
+    },
+    "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreNetworking.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreNetworking/Sources/CoreNetworking/CoreNetworking.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreNetworking.build/sources"
+    },
+    "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreStorage.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreStorage/Sources/CoreStorage/CoreStorage.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreStorage.build/sources"
+    },
+    "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/FeatureMealLog.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/Sources/FeatureMealLog/FeatureMealLog.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/FeatureMealLog.build/sources"
+    },
+    "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/FeatureMealLogPackageTests.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/FeatureMealLogPackageTests.derived/runner.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/FeatureMealLogPackageTests.build/sources"
+    },
+    "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/FeatureMealLogPackageTests.product/Objects.LinkFileList" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreAnalytics.build/CoreAnalytics.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreDomain.build/CoreDomain.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreFoundationKit.build/CoreFoundationKit.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreNetworking.build/CoreNetworking.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreStorage.build/CoreStorage.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/FeatureMealLog.build/FeatureMealLog.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/FeatureMealLogPackageTests.build/runner.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/FeatureMealLogTests.build/FeatureMealLogTests.swift.o"
+        }
+      ],
+      "outputFilePath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/FeatureMealLogPackageTests.product/Objects.LinkFileList"
+    },
+    "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/FeatureMealLogTests.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/Tests/FeatureMealLogTests/FeatureMealLogTests.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/FeatureMealLogTests.build/sources"
+    },
+    "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt" : {
+      "alwaysOutOfDate" : true,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<swift-get-version>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+        }
+      ],
+      "outputFilePath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+    }
+  }
+}

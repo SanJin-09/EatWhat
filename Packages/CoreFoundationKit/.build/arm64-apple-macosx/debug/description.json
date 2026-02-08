@@ -1,0 +1,638 @@
+{
+  "builtTestProducts" : [
+    {
+      "binaryPath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/CoreFoundationKitPackageTests.xctest/Contents/MacOS/CoreFoundationKitPackageTests",
+      "packagePath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit",
+      "productName" : "CoreFoundationKitPackageTests"
+    }
+  ],
+  "copyCommands" : {
+
+  },
+  "explicitTargetDependencyImportCheckingMode" : {
+    "none" : {
+
+    }
+  },
+  "generatedSourceTargetSet" : [
+
+  ],
+  "pluginDescriptions" : [
+
+  ],
+  "swiftCommands" : {
+    "C.CoreFoundationKit-arm64-apple-macosx26.0-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/CoreFoundationKit.build/sources",
+      "importPath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/Sources/CoreFoundationKit/CoreFoundationKit.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/CoreFoundationKit.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "CoreFoundationKit",
+      "moduleOutputPath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/Modules/CoreFoundationKit.swiftmodule",
+      "objects" : [
+        "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/CoreFoundationKit.build/CoreFoundationKit.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx10.13",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/CoreFoundationKit.build/include/CoreFoundationKit-Swift.h",
+        "-swift-version",
+        "5",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "corefoundationkit"
+      ],
+      "outputFileMapPath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/CoreFoundationKit.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/CoreFoundationKit.build/CoreFoundationKit.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/Modules/CoreFoundationKit.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/Sources/CoreFoundationKit/CoreFoundationKit.swift"
+      ],
+      "tempsPath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/CoreFoundationKit.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.CoreFoundationKitPackageTests-arm64-apple-macosx26.0-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/CoreFoundationKitPackageTests.build/sources",
+      "importPath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/CoreFoundationKitPackageTests.derived/runner.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/Modules/CoreFoundationKitTests.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/CoreFoundationKitPackageTests.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "CoreFoundationKitPackageTests",
+      "moduleOutputPath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/Modules/CoreFoundationKitPackageTests.swiftmodule",
+      "objects" : [
+        "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/CoreFoundationKitPackageTests.build/runner.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx10.13",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-Xfrontend",
+        "-enable-cross-import-overlays",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/CoreFoundationKitPackageTests.build/include/CoreFoundationKitPackageTests-Swift.h",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "corefoundationkit"
+      ],
+      "outputFileMapPath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/CoreFoundationKitPackageTests.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/CoreFoundationKitPackageTests.build/runner.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/Modules/CoreFoundationKitPackageTests.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/CoreFoundationKitPackageTests.derived/runner.swift"
+      ],
+      "tempsPath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/CoreFoundationKitPackageTests.build",
+      "wholeModuleOptimization" : false
+    },
+    "C.CoreFoundationKitTests-arm64-apple-macosx26.0-debug.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/CoreFoundationKitTests.build/sources",
+      "importPath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/Tests/CoreFoundationKitTests/CoreFoundationKitTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/Modules/CoreFoundationKit.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/CoreFoundationKitTests.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "CoreFoundationKitTests",
+      "moduleOutputPath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/Modules/CoreFoundationKitTests.swiftmodule",
+      "objects" : [
+        "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/CoreFoundationKitTests.build/CoreFoundationKitTests.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx14.0",
+        "-incremental",
+        "-enable-batch-mode",
+        "-serialize-diagnostics",
+        "-index-store-path",
+        "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/index/store",
+        "-Onone",
+        "-enable-testing",
+        "-Xfrontend",
+        "-enable-cross-import-overlays",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-DDEBUG",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-swift-version",
+        "5",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "corefoundationkit"
+      ],
+      "outputFileMapPath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/CoreFoundationKitTests.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/CoreFoundationKitTests.build/CoreFoundationKitTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/Modules/CoreFoundationKitTests.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/Tests/CoreFoundationKitTests/CoreFoundationKitTests.swift"
+      ],
+      "tempsPath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/CoreFoundationKitTests.build",
+      "wholeModuleOptimization" : false
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "swiftTargetScanArgs" : {
+    "CoreFoundationKit" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "CoreFoundationKit",
+      "-package-name",
+      "corefoundationkit",
+      "-c",
+      "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/Sources/CoreFoundationKit/CoreFoundationKit.swift",
+      "-I",
+      "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx10.13",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-j10",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/CoreFoundationKit.build/include/CoreFoundationKit-Swift.h",
+      "-swift-version",
+      "5",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "corefoundationkit",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "CoreFoundationKitPackageTests" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "CoreFoundationKitPackageTests",
+      "-package-name",
+      "corefoundationkit",
+      "-c",
+      "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/CoreFoundationKitPackageTests.derived/runner.swift",
+      "-I",
+      "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx10.13",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-Xfrontend",
+      "-enable-cross-import-overlays",
+      "-j10",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/CoreFoundationKitPackageTests.build/include/CoreFoundationKitPackageTests-Swift.h",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "corefoundationkit",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "CoreFoundationKitTests" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "CoreFoundationKitTests",
+      "-package-name",
+      "corefoundationkit",
+      "-c",
+      "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/Tests/CoreFoundationKitTests/CoreFoundationKitTests.swift",
+      "-I",
+      "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/Modules",
+      "-target",
+      "arm64-apple-macosx14.0",
+      "-incremental",
+      "-enable-batch-mode",
+      "-serialize-diagnostics",
+      "-index-store-path",
+      "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/index/store",
+      "-Onone",
+      "-enable-testing",
+      "-Xfrontend",
+      "-enable-cross-import-overlays",
+      "-j10",
+      "-DSWIFT_PACKAGE",
+      "-DDEBUG",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-swift-version",
+      "5",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.2.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/PrivateFrameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "corefoundationkit",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ]
+  },
+  "targetDependencyMap" : {
+    "CoreFoundationKit" : [
+
+    ],
+    "CoreFoundationKitPackageTests" : [
+      "CoreFoundationKitTests",
+      "CoreFoundationKit"
+    ],
+    "CoreFoundationKitTests" : [
+      "CoreFoundationKit"
+    ]
+  },
+  "testDiscoveryCommands" : {
+
+  },
+  "testEntryPointCommands" : {
+    "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/CoreFoundationKitPackageTests.derived/runner.swift" : {
+      "inputs" : [
+
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/CoreFoundationKitPackageTests.derived/runner.swift"
+        }
+      ]
+    }
+  },
+  "traitConfiguration" : {
+    "default" : {
+
+    }
+  },
+  "writeCommands" : {
+    "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/CoreFoundationKit.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/Sources/CoreFoundationKit/CoreFoundationKit.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/CoreFoundationKit.build/sources"
+    },
+    "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/CoreFoundationKitPackageTests.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/CoreFoundationKitPackageTests.derived/runner.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/CoreFoundationKitPackageTests.build/sources"
+    },
+    "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/CoreFoundationKitPackageTests.product/Objects.LinkFileList" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/CoreFoundationKit.build/CoreFoundationKit.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/CoreFoundationKitPackageTests.build/runner.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/CoreFoundationKitTests.build/CoreFoundationKitTests.swift.o"
+        }
+      ],
+      "outputFilePath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/CoreFoundationKitPackageTests.product/Objects.LinkFileList"
+    },
+    "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/CoreFoundationKitTests.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/Tests/CoreFoundationKitTests/CoreFoundationKitTests.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/CoreFoundationKitTests.build/sources"
+    },
+    "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt" : {
+      "alwaysOutOfDate" : true,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<swift-get-version>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+        }
+      ],
+      "outputFilePath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+    }
+  }
+}

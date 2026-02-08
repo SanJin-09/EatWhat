@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/FeatureMealLogTests.build/master.swiftdeps"
+  },
+  "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/Tests/FeatureMealLogTests/FeatureMealLogTests.swift": {
+    "dependencies": "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/FeatureMealLogTests.build/FeatureMealLogTests.d",
+    "object": "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/FeatureMealLogTests.build/FeatureMealLogTests.swift.o",
+    "swiftmodule": "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/FeatureMealLogTests.build/FeatureMealLogTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/FeatureMealLogTests.build/FeatureMealLogTests.swiftdeps",
+    "diagnostics": "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/FeatureMealLogTests.build/FeatureMealLogTests.dia"
+  }
+}

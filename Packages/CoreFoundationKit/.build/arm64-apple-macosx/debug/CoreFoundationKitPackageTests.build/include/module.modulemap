@@ -1,0 +1,3 @@
+module CoreFoundationKitPackageTests {
+    header "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/CoreFoundationKitPackageTests.build/include/CoreFoundationKitPackageTests-Swift.h"
+}

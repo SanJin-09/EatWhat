@@ -1,0 +1,27 @@
+{
+  "object" : {
+    "artifacts" : [
+
+    ],
+    "dependencies" : [
+      {
+        "basedOn" : null,
+        "packageRef" : {
+          "identity" : "corefoundationkit",
+          "kind" : "fileSystem",
+          "location" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit",
+          "name" : "CoreFoundationKit"
+        },
+        "state" : {
+          "name" : "fileSystem",
+          "path" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit"
+        },
+        "subpath" : "corefoundationkit"
+      }
+    ],
+    "prebuilts" : [
+
+    ]
+  },
+  "version" : 7
+}

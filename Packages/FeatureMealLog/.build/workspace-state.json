@@ -1,0 +1,83 @@
+{
+  "object" : {
+    "artifacts" : [
+
+    ],
+    "dependencies" : [
+      {
+        "basedOn" : null,
+        "packageRef" : {
+          "identity" : "coreanalytics",
+          "kind" : "fileSystem",
+          "location" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreAnalytics",
+          "name" : "CoreAnalytics"
+        },
+        "state" : {
+          "name" : "fileSystem",
+          "path" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreAnalytics"
+        },
+        "subpath" : "coreanalytics"
+      },
+      {
+        "basedOn" : null,
+        "packageRef" : {
+          "identity" : "coredomain",
+          "kind" : "fileSystem",
+          "location" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain",
+          "name" : "CoreDomain"
+        },
+        "state" : {
+          "name" : "fileSystem",
+          "path" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain"
+        },
+        "subpath" : "coredomain"
+      },
+      {
+        "basedOn" : null,
+        "packageRef" : {
+          "identity" : "corefoundationkit",
+          "kind" : "fileSystem",
+          "location" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit",
+          "name" : "CoreFoundationKit"
+        },
+        "state" : {
+          "name" : "fileSystem",
+          "path" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit"
+        },
+        "subpath" : "corefoundationkit"
+      },
+      {
+        "basedOn" : null,
+        "packageRef" : {
+          "identity" : "corenetworking",
+          "kind" : "fileSystem",
+          "location" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreNetworking",
+          "name" : "CoreNetworking"
+        },
+        "state" : {
+          "name" : "fileSystem",
+          "path" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreNetworking"
+        },
+        "subpath" : "corenetworking"
+      },
+      {
+        "basedOn" : null,
+        "packageRef" : {
+          "identity" : "corestorage",
+          "kind" : "fileSystem",
+          "location" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreStorage",
+          "name" : "CoreStorage"
+        },
+        "state" : {
+          "name" : "fileSystem",
+          "path" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreStorage"
+        },
+        "subpath" : "corestorage"
+      }
+    ],
+    "prebuilts" : [
+
+    ]
+  },
+  "version" : 7
+}

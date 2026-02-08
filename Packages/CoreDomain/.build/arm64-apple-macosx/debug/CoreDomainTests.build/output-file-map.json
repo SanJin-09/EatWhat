@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/.build/arm64-apple-macosx/debug/CoreDomainTests.build/master.swiftdeps"
+  },
+  "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/Tests/CoreDomainTests/CoreDomainTests.swift": {
+    "dependencies": "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/.build/arm64-apple-macosx/debug/CoreDomainTests.build/CoreDomainTests.d",
+    "object": "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/.build/arm64-apple-macosx/debug/CoreDomainTests.build/CoreDomainTests.swift.o",
+    "swiftmodule": "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/.build/arm64-apple-macosx/debug/CoreDomainTests.build/CoreDomainTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/.build/arm64-apple-macosx/debug/CoreDomainTests.build/CoreDomainTests.swiftdeps",
+    "diagnostics": "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/.build/arm64-apple-macosx/debug/CoreDomainTests.build/CoreDomainTests.dia"
+  }
+}

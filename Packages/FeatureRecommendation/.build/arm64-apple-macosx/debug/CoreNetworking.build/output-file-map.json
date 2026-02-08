@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/.build/arm64-apple-macosx/debug/CoreNetworking.build/master.swiftdeps"
+  },
+  "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreNetworking/Sources/CoreNetworking/CoreNetworking.swift": {
+    "dependencies": "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/.build/arm64-apple-macosx/debug/CoreNetworking.build/CoreNetworking.d",
+    "object": "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/.build/arm64-apple-macosx/debug/CoreNetworking.build/CoreNetworking.swift.o",
+    "swiftmodule": "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/.build/arm64-apple-macosx/debug/CoreNetworking.build/CoreNetworking~partial.swiftmodule",
+    "swift-dependencies": "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/.build/arm64-apple-macosx/debug/CoreNetworking.build/CoreNetworking.swiftdeps",
+    "diagnostics": "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/.build/arm64-apple-macosx/debug/CoreNetworking.build/CoreNetworking.dia"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreStorage.build/master.swiftdeps"
+  },
+  "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreStorage/Sources/CoreStorage/CoreStorage.swift": {
+    "dependencies": "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreStorage.build/CoreStorage.d",
+    "object": "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreStorage.build/CoreStorage.swift.o",
+    "swiftmodule": "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreStorage.build/CoreStorage~partial.swiftmodule",
+    "swift-dependencies": "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreStorage.build/CoreStorage.swiftdeps",
+    "diagnostics": "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreStorage.build/CoreStorage.dia"
+  }
+}

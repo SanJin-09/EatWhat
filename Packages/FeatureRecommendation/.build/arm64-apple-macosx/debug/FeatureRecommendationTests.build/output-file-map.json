@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/.build/arm64-apple-macosx/debug/FeatureRecommendationTests.build/master.swiftdeps"
+  },
+  "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/Tests/FeatureRecommendationTests/FeatureRecommendationTests.swift": {
+    "dependencies": "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/.build/arm64-apple-macosx/debug/FeatureRecommendationTests.build/FeatureRecommendationTests.d",
+    "object": "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/.build/arm64-apple-macosx/debug/FeatureRecommendationTests.build/FeatureRecommendationTests.swift.o",
+    "swiftmodule": "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/.build/arm64-apple-macosx/debug/FeatureRecommendationTests.build/FeatureRecommendationTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/.build/arm64-apple-macosx/debug/FeatureRecommendationTests.build/FeatureRecommendationTests.swiftdeps",
+    "diagnostics": "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/.build/arm64-apple-macosx/debug/FeatureRecommendationTests.build/FeatureRecommendationTests.dia"
+  }
+}

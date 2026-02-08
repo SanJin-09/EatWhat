@@ -1,0 +1,3 @@
+module CoreFoundationKit {
+    header "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/.build/arm64-apple-macosx/debug/CoreFoundationKit.build/include/CoreFoundationKit-Swift.h"
+}

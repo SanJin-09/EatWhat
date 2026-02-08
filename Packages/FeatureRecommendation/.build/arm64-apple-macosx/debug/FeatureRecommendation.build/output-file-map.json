@@ -1,0 +1,33 @@
+{
+  "": {
+    "swift-dependencies": "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/.build/arm64-apple-macosx/debug/FeatureRecommendation.build/master.swiftdeps"
+  },
+  "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/Sources/FeatureRecommendation/FeatureRecommendation.swift": {
+    "dependencies": "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/.build/arm64-apple-macosx/debug/FeatureRecommendation.build/FeatureRecommendation.d",
+    "object": "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/.build/arm64-apple-macosx/debug/FeatureRecommendation.build/FeatureRecommendation.swift.o",
+    "swiftmodule": "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/.build/arm64-apple-macosx/debug/FeatureRecommendation.build/FeatureRecommendation~partial.swiftmodule",
+    "swift-dependencies": "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/.build/arm64-apple-macosx/debug/FeatureRecommendation.build/FeatureRecommendation.swiftdeps",
+    "diagnostics": "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/.build/arm64-apple-macosx/debug/FeatureRecommendation.build/FeatureRecommendation.dia"
+  },
+  "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/Sources/FeatureRecommendation/RecommendationEngine.swift": {
+    "dependencies": "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/.build/arm64-apple-macosx/debug/FeatureRecommendation.build/RecommendationEngine.d",
+    "object": "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/.build/arm64-apple-macosx/debug/FeatureRecommendation.build/RecommendationEngine.swift.o",
+    "swiftmodule": "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/.build/arm64-apple-macosx/debug/FeatureRecommendation.build/RecommendationEngine~partial.swiftmodule",
+    "swift-dependencies": "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/.build/arm64-apple-macosx/debug/FeatureRecommendation.build/RecommendationEngine.swiftdeps",
+    "diagnostics": "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/.build/arm64-apple-macosx/debug/FeatureRecommendation.build/RecommendationEngine.dia"
+  },
+  "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/Sources/FeatureRecommendation/RecommendationHomeView.swift": {
+    "dependencies": "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/.build/arm64-apple-macosx/debug/FeatureRecommendation.build/RecommendationHomeView.d",
+    "object": "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/.build/arm64-apple-macosx/debug/FeatureRecommendation.build/RecommendationHomeView.swift.o",
+    "swiftmodule": "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/.build/arm64-apple-macosx/debug/FeatureRecommendation.build/RecommendationHomeView~partial.swiftmodule",
+    "swift-dependencies": "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/.build/arm64-apple-macosx/debug/FeatureRecommendation.build/RecommendationHomeView.swiftdeps",
+    "diagnostics": "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/.build/arm64-apple-macosx/debug/FeatureRecommendation.build/RecommendationHomeView.dia"
+  },
+  "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/Sources/FeatureRecommendation/RecommendationViewModel.swift": {
+    "dependencies": "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/.build/arm64-apple-macosx/debug/FeatureRecommendation.build/RecommendationViewModel.d",
+    "object": "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/.build/arm64-apple-macosx/debug/FeatureRecommendation.build/RecommendationViewModel.swift.o",
+    "swiftmodule": "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/.build/arm64-apple-macosx/debug/FeatureRecommendation.build/RecommendationViewModel~partial.swiftmodule",
+    "swift-dependencies": "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/.build/arm64-apple-macosx/debug/FeatureRecommendation.build/RecommendationViewModel.swiftdeps",
+    "diagnostics": "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/.build/arm64-apple-macosx/debug/FeatureRecommendation.build/RecommendationViewModel.dia"
+  }
+}

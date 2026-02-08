@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/.build/arm64-apple-macosx/debug/CoreFoundationKit.build/master.swiftdeps"
+  },
+  "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/Sources/CoreFoundationKit/CoreFoundationKit.swift": {
+    "dependencies": "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/.build/arm64-apple-macosx/debug/CoreFoundationKit.build/CoreFoundationKit.d",
+    "object": "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/.build/arm64-apple-macosx/debug/CoreFoundationKit.build/CoreFoundationKit.swift.o",
+    "swiftmodule": "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/.build/arm64-apple-macosx/debug/CoreFoundationKit.build/CoreFoundationKit~partial.swiftmodule",
+    "swift-dependencies": "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/.build/arm64-apple-macosx/debug/CoreFoundationKit.build/CoreFoundationKit.swiftdeps",
+    "diagnostics": "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/.build/arm64-apple-macosx/debug/CoreFoundationKit.build/CoreFoundationKit.dia"
+  }
+}

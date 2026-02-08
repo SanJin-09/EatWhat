@@ -1,0 +1,33 @@
+{
+  "": {
+    "swift-dependencies": "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/.build/arm64-apple-macosx/debug/CoreDomain.build/master.swiftdeps"
+  },
+  "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/Sources/CoreDomain/CoreDomain.swift": {
+    "dependencies": "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/.build/arm64-apple-macosx/debug/CoreDomain.build/CoreDomain.d",
+    "object": "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/.build/arm64-apple-macosx/debug/CoreDomain.build/CoreDomain.swift.o",
+    "swiftmodule": "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/.build/arm64-apple-macosx/debug/CoreDomain.build/CoreDomain~partial.swiftmodule",
+    "swift-dependencies": "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/.build/arm64-apple-macosx/debug/CoreDomain.build/CoreDomain.swiftdeps",
+    "diagnostics": "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/.build/arm64-apple-macosx/debug/CoreDomain.build/CoreDomain.dia"
+  },
+  "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/Sources/CoreDomain/MealLog.swift": {
+    "dependencies": "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/.build/arm64-apple-macosx/debug/CoreDomain.build/MealLog.d",
+    "object": "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/.build/arm64-apple-macosx/debug/CoreDomain.build/MealLog.swift.o",
+    "swiftmodule": "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/.build/arm64-apple-macosx/debug/CoreDomain.build/MealLog~partial.swiftmodule",
+    "swift-dependencies": "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/.build/arm64-apple-macosx/debug/CoreDomain.build/MealLog.swiftdeps",
+    "diagnostics": "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/.build/arm64-apple-macosx/debug/CoreDomain.build/MealLog.dia"
+  },
+  "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/Sources/CoreDomain/MealLogRepository.swift": {
+    "dependencies": "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/.build/arm64-apple-macosx/debug/CoreDomain.build/MealLogRepository.d",
+    "object": "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/.build/arm64-apple-macosx/debug/CoreDomain.build/MealLogRepository.swift.o",
+    "swiftmodule": "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/.build/arm64-apple-macosx/debug/CoreDomain.build/MealLogRepository~partial.swiftmodule",
+    "swift-dependencies": "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/.build/arm64-apple-macosx/debug/CoreDomain.build/MealLogRepository.swiftdeps",
+    "diagnostics": "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/.build/arm64-apple-macosx/debug/CoreDomain.build/MealLogRepository.dia"
+  },
+  "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/Sources/CoreDomain/MealLogUseCases.swift": {
+    "dependencies": "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/.build/arm64-apple-macosx/debug/CoreDomain.build/MealLogUseCases.d",
+    "object": "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/.build/arm64-apple-macosx/debug/CoreDomain.build/MealLogUseCases.swift.o",
+    "swiftmodule": "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/.build/arm64-apple-macosx/debug/CoreDomain.build/MealLogUseCases~partial.swiftmodule",
+    "swift-dependencies": "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/.build/arm64-apple-macosx/debug/CoreDomain.build/MealLogUseCases.swiftdeps",
+    "diagnostics": "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/.build/arm64-apple-macosx/debug/CoreDomain.build/MealLogUseCases.dia"
+  }
+}

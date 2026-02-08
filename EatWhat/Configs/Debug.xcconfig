@@ -1,0 +1,3 @@
+#include? "../../Pods/Target Support Files/Pods-EatWhat/Pods-EatWhat.debug.xcconfig"
+
+#include? "LocalSecrets.xcconfig"

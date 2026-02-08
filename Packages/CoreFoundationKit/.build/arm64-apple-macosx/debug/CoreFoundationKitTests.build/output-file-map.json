@@ -1,0 +1,12 @@
+{
+  "": {
+    "swift-dependencies": "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/CoreFoundationKitTests.build/master.swiftdeps"
+  },
+  "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/Tests/CoreFoundationKitTests/CoreFoundationKitTests.swift": {
+    "dependencies": "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/CoreFoundationKitTests.build/CoreFoundationKitTests.d",
+    "object": "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/CoreFoundationKitTests.build/CoreFoundationKitTests.swift.o",
+    "swiftmodule": "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/CoreFoundationKitTests.build/CoreFoundationKitTests~partial.swiftmodule",
+    "swift-dependencies": "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/CoreFoundationKitTests.build/CoreFoundationKitTests.swiftdeps",
+    "diagnostics": "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreFoundationKit/.build/arm64-apple-macosx/debug/CoreFoundationKitTests.build/CoreFoundationKitTests.dia"
+  }
+}

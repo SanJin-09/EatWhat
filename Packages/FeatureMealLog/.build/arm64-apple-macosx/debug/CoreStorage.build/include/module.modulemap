@@ -1,0 +1,3 @@
+module CoreStorage {
+    header "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreStorage.build/include/CoreStorage-Swift.h"
+}

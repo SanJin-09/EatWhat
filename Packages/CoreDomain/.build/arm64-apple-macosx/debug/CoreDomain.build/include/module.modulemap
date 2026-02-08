@@ -1,0 +1,3 @@
+module CoreDomain {
+    header "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/.build/arm64-apple-macosx/debug/CoreDomain.build/include/CoreDomain-Swift.h"
+}

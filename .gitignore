@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+
+# Xcode user/local files
+**/xcuserdata/
+*.xcuserstate
+DerivedData/
+build/
+
+# CocoaPods generated dependencies
+Pods/
+
+# Local secrets
+EatWhat/Configs/LocalSecrets.xcconfig

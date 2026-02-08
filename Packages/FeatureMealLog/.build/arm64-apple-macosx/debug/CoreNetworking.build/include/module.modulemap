@@ -1,0 +1,3 @@
+module CoreNetworking {
+    header "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureMealLog/.build/arm64-apple-macosx/debug/CoreNetworking.build/include/CoreNetworking-Swift.h"
+}

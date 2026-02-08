@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:EatWhat/EatWhat.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Packages/CoreFoundationKit">
+   </FileRef>
+   <FileRef
+      location = "group:Packages/CoreNetworking">
+   </FileRef>
+   <FileRef
+      location = "group:Packages/CoreStorage">
+   </FileRef>
+   <FileRef
+      location = "group:Packages/CoreDomain">
+   </FileRef>
+   <FileRef
+      location = "group:Packages/CoreDesignSystem">
+   </FileRef>
+   <FileRef
+      location = "group:Packages/CoreAnalytics">
+   </FileRef>
+   <FileRef
+      location = "group:Packages/FeatureAuthOnboarding">
+   </FileRef>
+   <FileRef
+      location = "group:Packages/FeatureMealLog">
+   </FileRef>
+   <FileRef
+      location = "group:Packages/FeatureNutrition">
+   </FileRef>
+   <FileRef
+      location = "group:Packages/FeatureRecommendation">
+   </FileRef>
+   <FileRef
+      location = "group:Packages/FeatureCampusStore">
+   </FileRef>
+   <FileRef
+      location = "group:Packages/FeatureReview">
+   </FileRef>
+   <FileRef
+      location = "group:Packages/FeatureProfileSettings">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>
