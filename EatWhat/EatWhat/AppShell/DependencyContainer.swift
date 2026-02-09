@@ -58,7 +58,7 @@ final class DependencyContainer {
 
     @MainActor
     func makeCampusStoreMapViewModel() -> CampusStoreMapViewModel {
-        CampusStoreMapViewModel()
+        CampusStoreMapViewModel(menuRepository: campusMenuRepository)
     }
 }
 
@@ -68,7 +68,20 @@ private extension DependencyContainer {
             return MockCampusMenuRepository()
         }
 
-        return RemoteCampusMenuRepository(baseURL: baseURL)
+#if !targetEnvironment(simulator)
+        if let host = baseURL.host?.lowercased(), host == "127.0.0.1" || host == "localhost" {
+            assertionFailure("CAMPUS_MENU_API_BASE_URL points to localhost on real device. Use your Mac LAN IP.")
+        }
+#endif
+
+        return RemoteCampusMenuRepository(baseURL: baseURL, session: makeCampusMenuURLSession())
+    }
+
+    static func makeCampusMenuURLSession() -> URLSession {
+        let configuration = URLSessionConfiguration.default
+        configuration.timeoutIntervalForRequest = 8
+        configuration.timeoutIntervalForResource = 15
+        return URLSession(configuration: configuration)
     }
 
     static func campusMenuBaseURLFromInfoPlist() -> URL? {

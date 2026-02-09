@@ -5,6 +5,7 @@ type DishResponseItem = {
   id: string;
   storeId: string;
   name: string;
+  imageUrl: string | null;
   price: number | null;
   nutrition: {
     caloriesKcal: number;
@@ -19,6 +20,8 @@ type DishResponseItem = {
 @Injectable()
 export class StoresService {
   constructor(private readonly prisma: PrismaService) {}
+  private readonly mediaPublicBaseURL =
+    process.env.MEDIA_PUBLIC_BASE_URL?.trim().replace(/\/+$/, '') ?? '';
 
   async listDishes(storeId: string): Promise<DishResponseItem[]> {
     const store = await this.prisma.campusStore.findUnique({
@@ -37,6 +40,7 @@ export class StoresService {
         id: true,
         storeId: true,
         name: true,
+        imageKey: true,
         price: true,
         caloriesKcal: true,
         proteinG: true,
@@ -60,6 +64,7 @@ export class StoresService {
         id: dish.id,
         storeId: dish.storeId,
         name: dish.name,
+        imageUrl: this.makeDishImageURL(dish.imageKey),
         price: dish.price === null ? null : Number(dish.price),
         nutrition: hasNutrition
           ? {
@@ -73,5 +78,14 @@ export class StoresService {
           : null,
       };
     });
+  }
+
+  private makeDishImageURL(imageKey: string | null): string | null {
+    if (!imageKey || !this.mediaPublicBaseURL) {
+      return null;
+    }
+
+    const normalizedKey = imageKey.replace(/^\/+/, '');
+    return `${this.mediaPublicBaseURL}/${normalizedKey}`;
   }
 }

@@ -9,3 +9,5 @@ dist
 coverage
 *.log
 prisma/schema.prisma.bak
+assets/dishes/*
+!assets/dishes/.gitkeep

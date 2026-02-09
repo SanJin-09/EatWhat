@@ -221,6 +221,12 @@ private struct AddMealLogSheetView: View {
                         .font(.footnote.weight(.semibold))
                         .foregroundStyle(.blue)
                 }
+
+                if let vmError = draftViewModel.errorMessage {
+                    Text(vmError)
+                        .font(.footnote)
+                        .foregroundStyle(.red)
+                }
             }
 
             Section("基础信息") {
@@ -306,12 +312,6 @@ private struct AddMealLogSheetView: View {
                 }
             }
 
-            if let vmError = draftViewModel.errorMessage {
-                Section {
-                    Text(vmError)
-                        .foregroundStyle(.red)
-                }
-            }
         }
         .navigationTitle("新增记录")
         .toolbar {

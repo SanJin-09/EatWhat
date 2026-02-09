@@ -121,10 +121,11 @@ private struct AddMealLogMapViewRepresentable: UIViewRepresentable {
                 longitude: currentCoordinate.longitude
             ).distance(from: CLLocation(latitude: targetCenter.latitude, longitude: targetCenter.longitude))
 
-            guard distance > 10 else { return }
+            // Avoid frequent recenter loops when user drags map or map emits tiny center drift.
+            guard distance > 20 else { return }
 
             isProgrammaticCenterChange = true
-            mapView.setCenter(targetCenter.coordinate2D, animated: true)
+            mapView.setCenter(targetCenter.coordinate2D, animated: false)
         }
 
         func syncSelection(on mapView: MKMapView, selectedStoreID: UUID?) {
@@ -195,14 +196,13 @@ private struct AddMealLogMapViewRepresentable: UIViewRepresentable {
 
             if isProgrammaticCenterChange {
                 isProgrammaticCenterChange = false
-                parent.onMapCenterChange(parent.campusBounds.clamped(currentCenter))
                 return
             }
 
             let clamped = parent.campusBounds.clamped(currentCenter)
             if clamped != currentCenter {
                 isProgrammaticCenterChange = true
-                mapView.setCenter(clamped.coordinate2D, animated: true)
+                mapView.setCenter(clamped.coordinate2D, animated: false)
             }
 
             parent.onMapCenterChange(clamped)

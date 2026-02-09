@@ -18,6 +18,7 @@ const prisma = new PrismaClient({
 
 type DishSeed = {
   name: string;
+  imageKey?: string;
   price: number;
   caloriesKcal: number;
   proteinG: number;
@@ -264,6 +265,42 @@ const storesSeed: StoreSeed[] = [
       },
     ],
   },
+  {
+    name: '不如麻浪烫',
+    area: '东门',
+    latitude: 32.205128,
+    longitude: 118.720412,
+    dishes: [
+      {
+        name: '麻辣烫',
+        price: 20,
+        caloriesKcal: 450,
+        proteinG: 28,
+        fatG: 13,
+        carbG: 52,
+        sodiumMg: 1370,
+        fiberG: 5.5,
+      },
+    ],
+  },
+  {
+    name: '李煲长',
+    area: '北门',
+    latitude: 32.208941,
+    longitude: 118.716808,
+    dishes: [
+      {
+        name: '黄焖鸡米饭',
+        price: 16,
+        caloriesKcal: 470,
+        proteinG: 27,
+        fatG: 15,
+        carbG: 57,
+        sodiumMg: 1300,
+        fiberG: 1.1,
+      },
+    ],
+  },
 ];
 
 async function main(): Promise<void> {
@@ -317,6 +354,7 @@ async function main(): Promise<void> {
           },
         },
         update: {
+          imageKey: dishSeed.imageKey ?? null,
           price: dishSeed.price,
           caloriesKcal: dishSeed.caloriesKcal,
           proteinG: dishSeed.proteinG,
@@ -329,6 +367,7 @@ async function main(): Promise<void> {
         create: {
           storeId: store.id,
           name: dishSeed.name,
+          imageKey: dishSeed.imageKey ?? null,
           price: dishSeed.price,
           caloriesKcal: dishSeed.caloriesKcal,
           proteinG: dishSeed.proteinG,

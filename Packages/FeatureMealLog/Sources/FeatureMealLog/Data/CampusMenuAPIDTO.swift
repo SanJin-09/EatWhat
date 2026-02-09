@@ -33,6 +33,7 @@ public struct CampusDishDTO: Codable, Sendable {
     public let id: UUID
     public let storeId: UUID
     public let name: String
+    public let imageUrl: String?
     public let price: Double?
     public let nutrition: NutritionDTO?
 
@@ -40,12 +41,14 @@ public struct CampusDishDTO: Codable, Sendable {
         id: UUID,
         storeId: UUID,
         name: String,
+        imageUrl: String?,
         price: Double?,
         nutrition: NutritionDTO?
     ) {
         self.id = id
         self.storeId = storeId
         self.name = name
+        self.imageUrl = imageUrl
         self.price = price
         self.nutrition = nutrition
     }

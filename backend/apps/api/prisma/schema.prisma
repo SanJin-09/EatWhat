@@ -66,6 +66,7 @@ model StoreDish {
   id           String   @id @default(uuid()) @db.Uuid
   storeId      String   @db.Uuid
   name         String
+  imageKey     String?  @db.VarChar(512)
   price        Decimal? @db.Decimal(10, 2)
   caloriesKcal Decimal? @db.Decimal(10, 2)
   proteinG     Decimal? @db.Decimal(10, 2)

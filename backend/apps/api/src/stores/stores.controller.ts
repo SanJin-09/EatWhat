@@ -13,6 +13,7 @@ export class StoresController {
       id: string;
       storeId: string;
       name: string;
+      imageUrl: string | null;
       price: number | null;
       nutrition: {
         caloriesKcal: number;

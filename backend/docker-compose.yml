@@ -26,6 +26,35 @@ services:
     volumes:
       - redis_data:/data
 
+  minio:
+    image: minio/minio:latest
+    container_name: eatwhat-minio
+    restart: unless-stopped
+    command: server /data --console-address ":9001"
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER:-eatwhat_minio}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD:-eatwhat_minio_pwd}
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    volumes:
+      - minio_data:/data
+
+  minio-init:
+    image: minio/mc:latest
+    container_name: eatwhat-minio-init
+    restart: "no"
+    depends_on:
+      - minio
+    entrypoint: >
+      /bin/sh -c "
+      until (/usr/bin/mc alias set local http://minio:9000 ${MINIO_ROOT_USER:-eatwhat_minio} ${MINIO_ROOT_PASSWORD:-eatwhat_minio_pwd}); do echo '...waiting for minio...' && sleep 2; done;
+      /usr/bin/mc mb -p local/${MEDIA_BUCKET:-eatwhat-dish-images} || true;
+      /usr/bin/mc anonymous set download local/${MEDIA_BUCKET:-eatwhat-dish-images};
+      exit 0;
+      "
+
 volumes:
   postgres_data:
   redis_data:
+  minio_data:

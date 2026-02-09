@@ -16,7 +16,7 @@ struct CampusStoreTabView: View {
         ZStack(alignment: .top) {
             mapSection
                 .ignoresSafeArea(edges: .all)
-            campusTopOverlay
+            topOverlayContainer
                 .safeAreaPadding(.top, 10)
         }
         .sheet(item: $viewModel.selectedStore, onDismiss: {
@@ -29,6 +29,36 @@ struct CampusStoreTabView: View {
             )
             .presentationDetents([.fraction(0.42)])
             .presentationDragIndicator(.visible)
+        }
+        .task {
+            await viewModel.loadStoresIfNeeded()
+        }
+    }
+
+    private var topOverlayContainer: some View {
+        VStack(spacing: 8) {
+            campusTopOverlay
+
+            if viewModel.isLoadingStores {
+                ProgressView("正在同步店铺数据...")
+                    .font(.footnote)
+                    .padding(.horizontal, 12)
+                    .padding(.vertical, 6)
+                    .background(.thinMaterial, in: Capsule())
+            } else if let errorMessage = viewModel.errorMessage {
+                Text(errorMessage)
+                    .font(.footnote)
+                    .foregroundStyle(.red)
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 6)
+                    .background(.regularMaterial, in: Capsule())
+                    .onTapGesture {
+                        viewModel.clearError()
+                        Task {
+                            await viewModel.loadStoresIfNeeded()
+                        }
+                    }
+            }
         }
     }
 
@@ -292,6 +322,10 @@ private struct MapKitCampusStoreMapSection: UIViewRepresentable {
             let currentIDs = Set(annotationsByID.keys)
             let removedIDs = currentIDs.subtracting(targetIDs)
             let addedStores = stores.filter { !currentIDs.contains($0.id) }
+            let changedStores = stores.filter {
+                guard let existing = annotationsByID[$0.id] else { return false }
+                return existing.store != $0
+            }
 
             if !removedIDs.isEmpty {
                 let removedAnnotations = removedIDs.compactMap { annotationsByID.removeValue(forKey: $0) }
@@ -304,6 +338,17 @@ private struct MapKitCampusStoreMapSection: UIViewRepresentable {
                     annotationsByID[annotation.store.id] = annotation
                 }
                 mapView.addAnnotations(addedAnnotations)
+            }
+
+            if !changedStores.isEmpty {
+                let oldAnnotations = changedStores.compactMap { annotationsByID[$0.id] }
+                mapView.removeAnnotations(oldAnnotations)
+
+                let refreshedAnnotations = changedStores.map(CampusStoreAnnotation.init)
+                for annotation in refreshedAnnotations {
+                    annotationsByID[annotation.store.id] = annotation
+                }
+                mapView.addAnnotations(refreshedAnnotations)
             }
         }
 
