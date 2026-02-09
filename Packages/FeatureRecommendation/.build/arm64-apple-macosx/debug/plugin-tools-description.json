@@ -133,6 +133,14 @@
       "inputs" : [
         {
           "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/Sources/CoreDomain/AutoMealTypeResolver.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/Sources/CoreDomain/CampusMenuRepository.swift"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/Sources/CoreDomain/CoreDomain.swift"
         },
         {
@@ -164,6 +172,8 @@
       "moduleName" : "CoreDomain",
       "moduleOutputPath" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/.build/arm64-apple-macosx/debug/Modules/CoreDomain.swiftmodule",
       "objects" : [
+        "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/.build/arm64-apple-macosx/debug/CoreDomain.build/AutoMealTypeResolver.swift.o",
+        "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/.build/arm64-apple-macosx/debug/CoreDomain.build/CampusMenuRepository.swift.o",
         "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/.build/arm64-apple-macosx/debug/CoreDomain.build/CoreDomain.swift.o",
         "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/.build/arm64-apple-macosx/debug/CoreDomain.build/MealLog.swift.o",
         "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/.build/arm64-apple-macosx/debug/CoreDomain.build/MealLogRepository.swift.o",
@@ -228,6 +238,14 @@
       "outputs" : [
         {
           "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/.build/arm64-apple-macosx/debug/CoreDomain.build/AutoMealTypeResolver.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/.build/arm64-apple-macosx/debug/CoreDomain.build/CampusMenuRepository.swift.o"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/.build/arm64-apple-macosx/debug/CoreDomain.build/CoreDomain.swift.o"
         },
         {
@@ -249,6 +267,8 @@
       ],
       "prepareForIndexing" : false,
       "sources" : [
+        "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/Sources/CoreDomain/AutoMealTypeResolver.swift",
+        "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/Sources/CoreDomain/CampusMenuRepository.swift",
         "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/Sources/CoreDomain/CoreDomain.swift",
         "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/Sources/CoreDomain/MealLog.swift",
         "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/Sources/CoreDomain/MealLogRepository.swift",
@@ -877,6 +897,8 @@
       "-package-name",
       "coredomain",
       "-c",
+      "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/Sources/CoreDomain/AutoMealTypeResolver.swift",
+      "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/Sources/CoreDomain/CampusMenuRepository.swift",
       "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/Sources/CoreDomain/CoreDomain.swift",
       "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/Sources/CoreDomain/MealLog.swift",
       "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/Sources/CoreDomain/MealLogRepository.swift",
@@ -1353,6 +1375,14 @@
         },
         {
           "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/Sources/CoreDomain/AutoMealTypeResolver.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/Sources/CoreDomain/CampusMenuRepository.swift"
+        },
+        {
+          "kind" : "file",
           "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/Sources/CoreDomain/CoreDomain.swift"
         },
         {
@@ -1448,6 +1478,14 @@
         {
           "kind" : "file",
           "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/.build/arm64-apple-macosx/debug/CoreAnalytics.build/CoreAnalytics.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/.build/arm64-apple-macosx/debug/CoreDomain.build/AutoMealTypeResolver.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/.build/arm64-apple-macosx/debug/CoreDomain.build/CampusMenuRepository.swift.o"
         },
         {
           "kind" : "file",

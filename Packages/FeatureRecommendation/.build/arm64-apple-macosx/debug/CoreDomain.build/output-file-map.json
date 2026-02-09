@@ -2,6 +2,20 @@
   "": {
     "swift-dependencies": "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/.build/arm64-apple-macosx/debug/CoreDomain.build/master.swiftdeps"
   },
+  "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/Sources/CoreDomain/AutoMealTypeResolver.swift": {
+    "dependencies": "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/.build/arm64-apple-macosx/debug/CoreDomain.build/AutoMealTypeResolver.d",
+    "object": "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/.build/arm64-apple-macosx/debug/CoreDomain.build/AutoMealTypeResolver.swift.o",
+    "swiftmodule": "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/.build/arm64-apple-macosx/debug/CoreDomain.build/AutoMealTypeResolver~partial.swiftmodule",
+    "swift-dependencies": "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/.build/arm64-apple-macosx/debug/CoreDomain.build/AutoMealTypeResolver.swiftdeps",
+    "diagnostics": "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/.build/arm64-apple-macosx/debug/CoreDomain.build/AutoMealTypeResolver.dia"
+  },
+  "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/Sources/CoreDomain/CampusMenuRepository.swift": {
+    "dependencies": "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/.build/arm64-apple-macosx/debug/CoreDomain.build/CampusMenuRepository.d",
+    "object": "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/.build/arm64-apple-macosx/debug/CoreDomain.build/CampusMenuRepository.swift.o",
+    "swiftmodule": "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/.build/arm64-apple-macosx/debug/CoreDomain.build/CampusMenuRepository~partial.swiftmodule",
+    "swift-dependencies": "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/.build/arm64-apple-macosx/debug/CoreDomain.build/CampusMenuRepository.swiftdeps",
+    "diagnostics": "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/.build/arm64-apple-macosx/debug/CoreDomain.build/CampusMenuRepository.dia"
+  },
   "/Users/sanjin/XcodeProject/EatWhat/Packages/CoreDomain/Sources/CoreDomain/CoreDomain.swift": {
     "dependencies": "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/.build/arm64-apple-macosx/debug/CoreDomain.build/CoreDomain.d",
     "object": "/Users/sanjin/XcodeProject/EatWhat/Packages/FeatureRecommendation/.build/arm64-apple-macosx/debug/CoreDomain.build/CoreDomain.swift.o",

@@ -18,6 +18,7 @@ const prisma = new PrismaClient({
 
 type DishSeed = {
   name: string;
+  legacyName?: string;
   imageKey?: string;
   price: number;
   caloriesKcal: number;
@@ -30,6 +31,7 @@ type DishSeed = {
 
 type StoreSeed = {
   name: string;
+  legacyName?: string;
   area: string;
   latitude: number;
   longitude: number;
@@ -38,13 +40,15 @@ type StoreSeed = {
 
 const storesSeed: StoreSeed[] = [
   {
-    name: '第一食堂·风味面档',
+    name: 'First Canteen - Noodle Bar',
+    legacyName: '第一食堂·风味面档',
     area: '一食堂',
     latitude: 32.206352,
     longitude: 118.717893,
     dishes: [
       {
-        name: '番茄牛肉米线',
+        name: 'Tomato Beef Rice Noodles',
+        legacyName: '番茄牛肉米线',
         price: 15,
         caloriesKcal: 680,
         proteinG: 28,
@@ -54,7 +58,8 @@ const storesSeed: StoreSeed[] = [
         fiberG: 4.2,
       },
       {
-        name: '酸辣肥牛粉',
+        name: 'Hot and Sour Beef Rice Noodles',
+        legacyName: '酸辣肥牛粉',
         price: 16,
         caloriesKcal: 720,
         proteinG: 27,
@@ -64,7 +69,8 @@ const storesSeed: StoreSeed[] = [
         fiberG: 3.8,
       },
       {
-        name: '菌菇鸡汤面',
+        name: 'Mushroom Chicken Soup Noodles',
+        legacyName: '菌菇鸡汤面',
         price: 14,
         caloriesKcal: 610,
         proteinG: 24,
@@ -76,13 +82,15 @@ const storesSeed: StoreSeed[] = [
     ],
   },
   {
-    name: '第一食堂·快餐自选',
+    name: 'First Canteen - Fast Combo',
+    legacyName: '第一食堂·快餐自选',
     area: '一食堂',
     latitude: 32.206101,
     longitude: 118.717512,
     dishes: [
       {
-        name: '黑椒鸡腿饭',
+        name: 'Black Pepper Chicken Leg Rice',
+        legacyName: '黑椒鸡腿饭',
         price: 18,
         caloriesKcal: 760,
         proteinG: 35,
@@ -92,7 +100,8 @@ const storesSeed: StoreSeed[] = [
         fiberG: 5.3,
       },
       {
-        name: '土豆牛腩套餐',
+        name: 'Braised Beef Brisket with Potato Set',
+        legacyName: '土豆牛腩套餐',
         price: 19,
         caloriesKcal: 780,
         proteinG: 33,
@@ -102,7 +111,8 @@ const storesSeed: StoreSeed[] = [
         fiberG: 5.1,
       },
       {
-        name: '香菇青菜盖浇饭',
+        name: 'Mushroom and Greens Rice',
+        legacyName: '香菇青菜盖浇饭',
         price: 13,
         caloriesKcal: 620,
         proteinG: 16,
@@ -114,13 +124,15 @@ const storesSeed: StoreSeed[] = [
     ],
   },
   {
-    name: '第二食堂·铁板饭',
+    name: 'Second Canteen - Teppanyaki Rice',
+    legacyName: '第二食堂·铁板饭',
     area: '二食堂',
     latitude: 32.205487,
     longitude: 118.718451,
     dishes: [
       {
-        name: '照烧鸡排铁板饭',
+        name: 'Teriyaki Chicken Steak Iron Plate Rice',
+        legacyName: '照烧鸡排铁板饭',
         price: 20,
         caloriesKcal: 840,
         proteinG: 37,
@@ -130,7 +142,8 @@ const storesSeed: StoreSeed[] = [
         fiberG: 4.7,
       },
       {
-        name: '黑胡椒牛柳铁板面',
+        name: 'Black Pepper Beef Strips Iron Plate Noodles',
+        legacyName: '黑胡椒牛柳铁板面',
         price: 21,
         caloriesKcal: 860,
         proteinG: 34,
@@ -140,7 +153,8 @@ const storesSeed: StoreSeed[] = [
         fiberG: 4.1,
       },
       {
-        name: '孜然鸡丁铁板饭',
+        name: 'Cumin Chicken Dice Iron Plate Rice',
+        legacyName: '孜然鸡丁铁板饭',
         price: 18,
         caloriesKcal: 780,
         proteinG: 32,
@@ -152,13 +166,15 @@ const storesSeed: StoreSeed[] = [
     ],
   },
   {
-    name: '第二食堂·轻食能量碗',
+    name: 'Second Canteen - Light Energy Bowl',
+    legacyName: '第二食堂·轻食能量碗',
     area: '二食堂',
     latitude: 32.205731,
     longitude: 118.718197,
     dishes: [
       {
-        name: '鸡胸肉藜麦能量碗',
+        name: 'Chicken Breast Quinoa Power Bowl',
+        legacyName: '鸡胸肉藜麦能量碗',
         price: 22,
         caloriesKcal: 510,
         proteinG: 38,
@@ -168,7 +184,8 @@ const storesSeed: StoreSeed[] = [
         fiberG: 8.6,
       },
       {
-        name: '牛肉时蔬全麦碗',
+        name: 'Beef and Veg Whole Wheat Bowl',
+        legacyName: '牛肉时蔬全麦碗',
         price: 24,
         caloriesKcal: 560,
         proteinG: 35,
@@ -178,7 +195,8 @@ const storesSeed: StoreSeed[] = [
         fiberG: 9.1,
       },
       {
-        name: '金枪鱼玉米沙拉碗',
+        name: 'Tuna Corn Salad Bowl',
+        legacyName: '金枪鱼玉米沙拉碗',
         price: 21,
         caloriesKcal: 470,
         proteinG: 29,
@@ -190,13 +208,15 @@ const storesSeed: StoreSeed[] = [
     ],
   },
   {
-    name: '北门早餐铺',
+    name: 'North Gate Breakfast Stall',
+    legacyName: '北门早餐铺',
     area: '北门',
     latitude: 32.209386,
     longitude: 118.715984,
     dishes: [
       {
-        name: '豆浆 + 鸡蛋灌饼',
+        name: 'Soy Milk + Egg Pancake',
+        legacyName: '豆浆 + 鸡蛋灌饼',
         price: 9,
         caloriesKcal: 460,
         proteinG: 16,
@@ -206,7 +226,8 @@ const storesSeed: StoreSeed[] = [
         fiberG: 2.7,
       },
       {
-        name: '皮蛋瘦肉粥 + 小笼包',
+        name: 'Pork Congee + Soup Dumplings',
+        legacyName: '皮蛋瘦肉粥 + 小笼包',
         price: 10,
         caloriesKcal: 510,
         proteinG: 20,
@@ -216,7 +237,8 @@ const storesSeed: StoreSeed[] = [
         fiberG: 2.2,
       },
       {
-        name: '牛肉锅贴 + 豆腐脑',
+        name: 'Beef Potstickers + Tofu Pudding',
+        legacyName: '牛肉锅贴 + 豆腐脑',
         price: 11,
         caloriesKcal: 540,
         proteinG: 22,
@@ -228,13 +250,15 @@ const storesSeed: StoreSeed[] = [
     ],
   },
   {
-    name: '东门麻辣烫',
+    name: 'East Gate Mala Tang',
+    legacyName: '东门麻辣烫',
     area: '东门',
     latitude: 32.204872,
     longitude: 118.720934,
     dishes: [
       {
-        name: '微辣牛肉麻辣烫',
+        name: 'Mild Spicy Beef Mala Tang',
+        legacyName: '微辣牛肉麻辣烫',
         price: 20,
         caloriesKcal: 690,
         proteinG: 30,
@@ -244,7 +268,8 @@ const storesSeed: StoreSeed[] = [
         fiberG: 6.1,
       },
       {
-        name: '番茄浓汤麻辣烫',
+        name: 'Tomato Broth Mala Tang',
+        legacyName: '番茄浓汤麻辣烫',
         price: 19,
         caloriesKcal: 650,
         proteinG: 26,
@@ -254,7 +279,8 @@ const storesSeed: StoreSeed[] = [
         fiberG: 6.4,
       },
       {
-        name: '菌菇清汤麻辣烫',
+        name: 'Mushroom Clear Broth Mala Tang',
+        legacyName: '菌菇清汤麻辣烫',
         price: 18,
         caloriesKcal: 610,
         proteinG: 24,
@@ -266,13 +292,15 @@ const storesSeed: StoreSeed[] = [
     ],
   },
   {
-    name: '不如麻浪烫',
+    name: 'Buruma Mala Tang',
+    legacyName: '不如麻浪烫',
     area: '东门',
     latitude: 32.205128,
     longitude: 118.720412,
     dishes: [
       {
-        name: '麻辣烫',
+        name: 'Mala Tang',
+        legacyName: '麻辣烫',
         price: 20,
         caloriesKcal: 450,
         proteinG: 28,
@@ -284,13 +312,15 @@ const storesSeed: StoreSeed[] = [
     ],
   },
   {
-    name: '李煲长',
+    name: 'Li Bao Zhang',
+    legacyName: '李煲长',
     area: '北门',
     latitude: 32.208941,
     longitude: 118.716808,
     dishes: [
       {
-        name: '黄焖鸡米饭',
+        name: 'Braised Chicken Rice',
+        legacyName: '黄焖鸡米饭',
         price: 16,
         caloriesKcal: 470,
         proteinG: 27,
@@ -322,62 +352,86 @@ async function main(): Promise<void> {
   });
 
   for (const storeSeed of storesSeed) {
-    const store = await prisma.campusStore.upsert({
+    const storeNameCandidates = [storeSeed.name, storeSeed.legacyName].filter(
+      (value): value is string => Boolean(value),
+    );
+
+    const existingStore = await prisma.campusStore.findFirst({
       where: {
-        campusCode_name_area: {
-          campusCode: 'nuist',
-          name: storeSeed.name,
-          area: storeSeed.area,
-        },
-      },
-      update: {
-        latitude: storeSeed.latitude,
-        longitude: storeSeed.longitude,
-        isOpen: true,
-      },
-      create: {
         campusCode: 'nuist',
-        name: storeSeed.name,
         area: storeSeed.area,
-        latitude: storeSeed.latitude,
-        longitude: storeSeed.longitude,
-        isOpen: true,
+        name: { in: storeNameCandidates },
       },
+      select: { id: true },
     });
 
+    const store = existingStore
+      ? await prisma.campusStore.update({
+          where: { id: existingStore.id },
+          data: {
+            name: storeSeed.name,
+            latitude: storeSeed.latitude,
+            longitude: storeSeed.longitude,
+            isOpen: true,
+          },
+        })
+      : await prisma.campusStore.create({
+          data: {
+            campusCode: 'nuist',
+            name: storeSeed.name,
+            area: storeSeed.area,
+            latitude: storeSeed.latitude,
+            longitude: storeSeed.longitude,
+            isOpen: true,
+          },
+        });
+
     for (const dishSeed of storeSeed.dishes) {
-      await prisma.storeDish.upsert({
+      const dishNameCandidates = [dishSeed.name, dishSeed.legacyName].filter(
+        (value): value is string => Boolean(value),
+      );
+
+      const existingDish = await prisma.storeDish.findFirst({
         where: {
-          storeId_name: {
+          storeId: store.id,
+          name: { in: dishNameCandidates },
+        },
+        select: { id: true },
+      });
+
+      if (existingDish) {
+        await prisma.storeDish.update({
+          where: { id: existingDish.id },
+          data: {
+            name: dishSeed.name,
+            imageKey: dishSeed.imageKey ?? null,
+            price: dishSeed.price,
+            caloriesKcal: dishSeed.caloriesKcal,
+            proteinG: dishSeed.proteinG,
+            fatG: dishSeed.fatG,
+            carbG: dishSeed.carbG,
+            sodiumMg: dishSeed.sodiumMg,
+            fiberG: dishSeed.fiberG,
+            isAvailable: true,
+          },
+        });
+      } else {
+        await prisma.storeDish.create({
+          data: {
             storeId: store.id,
             name: dishSeed.name,
+            imageKey: dishSeed.imageKey ?? null,
+            price: dishSeed.price,
+            caloriesKcal: dishSeed.caloriesKcal,
+            proteinG: dishSeed.proteinG,
+            fatG: dishSeed.fatG,
+            carbG: dishSeed.carbG,
+            sodiumMg: dishSeed.sodiumMg,
+            fiberG: dishSeed.fiberG,
+            isAvailable: true,
           },
-        },
-        update: {
-          imageKey: dishSeed.imageKey ?? null,
-          price: dishSeed.price,
-          caloriesKcal: dishSeed.caloriesKcal,
-          proteinG: dishSeed.proteinG,
-          fatG: dishSeed.fatG,
-          carbG: dishSeed.carbG,
-          sodiumMg: dishSeed.sodiumMg,
-          fiberG: dishSeed.fiberG,
-          isAvailable: true,
-        },
-        create: {
-          storeId: store.id,
-          name: dishSeed.name,
-          imageKey: dishSeed.imageKey ?? null,
-          price: dishSeed.price,
-          caloriesKcal: dishSeed.caloriesKcal,
-          proteinG: dishSeed.proteinG,
-          fatG: dishSeed.fatG,
-          carbG: dishSeed.carbG,
-          sodiumMg: dishSeed.sodiumMg,
-          fiberG: dishSeed.fiberG,
-          isAvailable: true,
-        },
-      });
+        });
+      }
     }
   }
 }

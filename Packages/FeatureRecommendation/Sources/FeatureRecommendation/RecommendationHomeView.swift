@@ -1,10 +1,12 @@
 #if os(iOS)
 import SwiftUI
 import CoreDomain
+import UIKit
 
 public struct RecommendationHomeView: View {
     @ObservedObject private var viewModel: RecommendationViewModel
     private let userNamePlaceholder = "<用户名>"
+    @State private var heroImageName = RecommendationHomeView.randomHeroImageName()
 
     public init(viewModel: RecommendationViewModel) {
         self.viewModel = viewModel
@@ -48,6 +50,9 @@ public struct RecommendationHomeView: View {
         .task {
             await viewModel.load()
         }
+        .onAppear {
+            heroImageName = Self.randomHeroImageName()
+        }
         .alert(
             "加载失败",
             isPresented: Binding(
@@ -83,10 +88,32 @@ public struct RecommendationHomeView: View {
 
     private var heroRecommendationCard: some View {
         ZStack(alignment: .bottomLeading) {
-            RoundedRectangle(cornerRadius: 28, style: .continuous)
-                .fill(.black)
+            heroImageLayer
 
-            // Blank image placeholder for the first design pass.
+            heroBottomGlassLayer
+
+            heroTextLayer
+        }
+        .frame(maxWidth: .infinity)
+        .frame(height: 280)
+        .clipped()
+        .clipShape(RoundedRectangle(cornerRadius: 28, style: .continuous))
+        .overlay(
+            RoundedRectangle(cornerRadius: 28, style: .continuous)
+                .stroke(.white.opacity(0.08), lineWidth: 1)
+        )
+        .shadow(color: .black.opacity(0.24), radius: 16, x: 0, y: 8)
+    }
+
+    @ViewBuilder
+    private var heroImageLayer: some View {
+        if let image = UIImage(named: heroImageName) {
+            Image(uiImage: image)
+                .resizable()
+                .scaledToFill()
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .clipped()
+        } else {
             RoundedRectangle(cornerRadius: 16, style: .continuous)
                 .fill(.white.opacity(0.05))
                 .overlay(
@@ -102,39 +129,70 @@ public struct RecommendationHomeView: View {
                     }
                     .foregroundStyle(.white.opacity(0.52))
                 }
-                .padding(.horizontal, 20)
-                .padding(.top, 18)
-                .padding(.bottom, 80)
-
-            LinearGradient(
-                colors: [.clear, .black.opacity(0.78)],
-                startPoint: .top,
-                endPoint: .bottom
-            )
-            .clipShape(RoundedRectangle(cornerRadius: 28, style: .continuous))
-
-            VStack(alignment: .leading, spacing: 8) {
-                Text(primaryTitle)
-                    .font(.system(size: 31, weight: .bold, design: .rounded))
-                    .foregroundStyle(.white)
-                    .lineLimit(2)
-                    .minimumScaleFactor(0.75)
-
-                Text(primarySubtitle)
-                    .font(.system(size: 16, weight: .medium, design: .rounded))
-                    .foregroundStyle(.white.opacity(0.88))
-                    .lineLimit(2)
-            }
-            .padding(.horizontal, 22)
-            .padding(.bottom, 20)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background(.black)
         }
-        .frame(maxWidth: .infinity)
-        .frame(height: 280)
-        .overlay(
-            RoundedRectangle(cornerRadius: 28, style: .continuous)
-                .stroke(.white.opacity(0.08), lineWidth: 1)
-        )
-        .shadow(color: .black.opacity(0.24), radius: 16, x: 0, y: 8)
+    }
+
+    private var heroBottomGlassLayer: some View {
+        Rectangle()
+            .fill(.ultraThinMaterial)
+            .overlay(
+                LinearGradient(
+                    colors: [
+                        .white.opacity(0.26),
+                        .white.opacity(0.08),
+                        .clear,
+                    ],
+                    startPoint: .topLeading,
+                    endPoint: .bottomTrailing
+                )
+            )
+            .overlay(
+                LinearGradient(
+                    colors: [
+                        .clear,
+                        .black.opacity(0.14),
+                        .black.opacity(0.34),
+                    ],
+                    startPoint: .top,
+                    endPoint: .bottom
+                )
+            )
+            .mask(
+                LinearGradient(
+                    stops: [
+                        .init(color: .clear, location: 0.0),
+                        .init(color: .clear, location: 0.44),
+                        .init(color: .white.opacity(0.84), location: 0.7),
+                        .init(color: .white, location: 1.0),
+                    ],
+                    startPoint: .top,
+                    endPoint: .bottom
+                )
+            )
+            .allowsHitTesting(false)
+    }
+
+    private var heroTextLayer: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text(primaryTitle)
+                .font(.system(size: 31, weight: .bold, design: .rounded))
+                .foregroundStyle(.white)
+                .lineLimit(2)
+                .minimumScaleFactor(0.75)
+                .shadow(color: .black.opacity(0.35), radius: 8, x: 0, y: 2)
+
+            Text(primarySubtitle)
+                .font(.system(size: 16, weight: .medium, design: .rounded))
+                .foregroundStyle(.white.opacity(0.9))
+                .lineLimit(2)
+                .shadow(color: .black.opacity(0.24), radius: 4, x: 0, y: 1)
+        }
+        .padding(.horizontal, 22)
+        .padding(.top, 44)
+        .padding(.bottom, 22)
+        .frame(maxWidth: .infinity, alignment: .leading)
     }
 
     private var primaryTitle: String {
@@ -184,6 +242,15 @@ public struct RecommendationHomeView: View {
         formatter.dateFormat = "MM-dd HH:mm"
         return formatter
     }()
+
+    private static func randomHeroImageName() -> String {
+        heroImageNames.randomElement() ?? "HeroMalaTang"
+    }
+
+    private static let heroImageNames = [
+        "HeroMalaTang",
+        "HeroBraisedChickenRice",
+    ]
 }
 
 private struct RecommendationTimeContext {

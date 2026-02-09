@@ -56,22 +56,16 @@
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		384EC39A2F371B55001B2435 /* EatWhat */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
 			path = EatWhat;
 			sourceTree = "<group>";
 		};
 		384EC3A82F371B56001B2435 /* EatWhatTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
 			path = EatWhatTests;
 			sourceTree = "<group>";
 		};
 		384EC3B22F371B56001B2435 /* EatWhatUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
 			path = EatWhatUITests;
 			sourceTree = "<group>";
 		};
@@ -282,19 +276,19 @@
 			mainGroup = 384EC38F2F371B55001B2435;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				A10000000000000000000001 /* XCLocalSwiftPackageReference "CoreFoundationKit" */,
-				A10000000000000000000002 /* XCLocalSwiftPackageReference "CoreNetworking" */,
-				A10000000000000000000003 /* XCLocalSwiftPackageReference "CoreStorage" */,
-				A10000000000000000000004 /* XCLocalSwiftPackageReference "CoreDomain" */,
-				A10000000000000000000005 /* XCLocalSwiftPackageReference "CoreDesignSystem" */,
-				A10000000000000000000006 /* XCLocalSwiftPackageReference "CoreAnalytics" */,
-				A10000000000000000000007 /* XCLocalSwiftPackageReference "FeatureAuthOnboarding" */,
-				A10000000000000000000008 /* XCLocalSwiftPackageReference "FeatureMealLog" */,
-				A10000000000000000000009 /* XCLocalSwiftPackageReference "FeatureNutrition" */,
-				A1000000000000000000000A /* XCLocalSwiftPackageReference "FeatureRecommendation" */,
-				A1000000000000000000000B /* XCLocalSwiftPackageReference "FeatureCampusStore" */,
-				A1000000000000000000000C /* XCLocalSwiftPackageReference "FeatureReview" */,
-				A1000000000000000000000D /* XCLocalSwiftPackageReference "FeatureProfileSettings" */,
+				A10000000000000000000001 /* XCLocalSwiftPackageReference "../Packages/CoreFoundationKit" */,
+				A10000000000000000000002 /* XCLocalSwiftPackageReference "../Packages/CoreNetworking" */,
+				A10000000000000000000003 /* XCLocalSwiftPackageReference "../Packages/CoreStorage" */,
+				A10000000000000000000004 /* XCLocalSwiftPackageReference "../Packages/CoreDomain" */,
+				A10000000000000000000005 /* XCLocalSwiftPackageReference "../Packages/CoreDesignSystem" */,
+				A10000000000000000000006 /* XCLocalSwiftPackageReference "../Packages/CoreAnalytics" */,
+				A10000000000000000000007 /* XCLocalSwiftPackageReference "../Packages/FeatureAuthOnboarding" */,
+				A10000000000000000000008 /* XCLocalSwiftPackageReference "../Packages/FeatureMealLog" */,
+				A10000000000000000000009 /* XCLocalSwiftPackageReference "../Packages/FeatureNutrition" */,
+				A1000000000000000000000A /* XCLocalSwiftPackageReference "../Packages/FeatureRecommendation" */,
+				A1000000000000000000000B /* XCLocalSwiftPackageReference "../Packages/FeatureCampusStore" */,
+				A1000000000000000000000C /* XCLocalSwiftPackageReference "../Packages/FeatureReview" */,
+				A1000000000000000000000D /* XCLocalSwiftPackageReference "../Packages/FeatureProfileSettings" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 384EC3992F371B55001B2435 /* Products */;
@@ -702,55 +696,55 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		A10000000000000000000001 /* XCLocalSwiftPackageReference "CoreFoundationKit" */ = {
+		A10000000000000000000001 /* XCLocalSwiftPackageReference "../Packages/CoreFoundationKit" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../Packages/CoreFoundationKit;
 		};
-		A10000000000000000000002 /* XCLocalSwiftPackageReference "CoreNetworking" */ = {
+		A10000000000000000000002 /* XCLocalSwiftPackageReference "../Packages/CoreNetworking" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../Packages/CoreNetworking;
 		};
-		A10000000000000000000003 /* XCLocalSwiftPackageReference "CoreStorage" */ = {
+		A10000000000000000000003 /* XCLocalSwiftPackageReference "../Packages/CoreStorage" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../Packages/CoreStorage;
 		};
-		A10000000000000000000004 /* XCLocalSwiftPackageReference "CoreDomain" */ = {
+		A10000000000000000000004 /* XCLocalSwiftPackageReference "../Packages/CoreDomain" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../Packages/CoreDomain;
 		};
-		A10000000000000000000005 /* XCLocalSwiftPackageReference "CoreDesignSystem" */ = {
+		A10000000000000000000005 /* XCLocalSwiftPackageReference "../Packages/CoreDesignSystem" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../Packages/CoreDesignSystem;
 		};
-		A10000000000000000000006 /* XCLocalSwiftPackageReference "CoreAnalytics" */ = {
+		A10000000000000000000006 /* XCLocalSwiftPackageReference "../Packages/CoreAnalytics" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../Packages/CoreAnalytics;
 		};
-		A10000000000000000000007 /* XCLocalSwiftPackageReference "FeatureAuthOnboarding" */ = {
+		A10000000000000000000007 /* XCLocalSwiftPackageReference "../Packages/FeatureAuthOnboarding" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../Packages/FeatureAuthOnboarding;
 		};
-		A10000000000000000000008 /* XCLocalSwiftPackageReference "FeatureMealLog" */ = {
+		A10000000000000000000008 /* XCLocalSwiftPackageReference "../Packages/FeatureMealLog" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../Packages/FeatureMealLog;
 		};
-		A10000000000000000000009 /* XCLocalSwiftPackageReference "FeatureNutrition" */ = {
+		A10000000000000000000009 /* XCLocalSwiftPackageReference "../Packages/FeatureNutrition" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../Packages/FeatureNutrition;
 		};
-		A1000000000000000000000A /* XCLocalSwiftPackageReference "FeatureRecommendation" */ = {
+		A1000000000000000000000A /* XCLocalSwiftPackageReference "../Packages/FeatureRecommendation" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../Packages/FeatureRecommendation;
 		};
-		A1000000000000000000000B /* XCLocalSwiftPackageReference "FeatureCampusStore" */ = {
+		A1000000000000000000000B /* XCLocalSwiftPackageReference "../Packages/FeatureCampusStore" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../Packages/FeatureCampusStore;
 		};
-		A1000000000000000000000C /* XCLocalSwiftPackageReference "FeatureReview" */ = {
+		A1000000000000000000000C /* XCLocalSwiftPackageReference "../Packages/FeatureReview" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../Packages/FeatureReview;
 		};
-		A1000000000000000000000D /* XCLocalSwiftPackageReference "FeatureProfileSettings" */ = {
+		A1000000000000000000000D /* XCLocalSwiftPackageReference "../Packages/FeatureProfileSettings" */ = {
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../Packages/FeatureProfileSettings;
 		};
