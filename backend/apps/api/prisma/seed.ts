@@ -45,6 +45,8 @@ type CanteenFloorSeed = {
 
 type CanteenSeed = {
   name: string;
+  latitude: number;
+  longitude: number;
   floors: CanteenFloorSeed[];
 };
 
@@ -56,188 +58,24 @@ const defaultCampusCode = 'nuist';
 
 const canteensSeed: CanteenSeed[] = [
   {
-    name: '一食堂',
+    name: '东苑一食堂',
+    latitude: 32.206443,
+    longitude: 118.719779,
     floors: [
       {
         floorOrder: 1,
         floorLabel: '1F',
-        stores: [
-          {
-            name: '第一食堂·风味面档',
-            legacyName: 'First Canteen - Noodle Bar',
-            latitude: 32.206352,
-            longitude: 118.717893,
-            dishes: [
-              {
-                name: '番茄牛肉米线',
-                legacyName: 'Tomato Beef Rice Noodles',
-                price: 15,
-                caloriesKcal: 680,
-                proteinG: 28,
-                fatG: 21,
-                carbG: 92,
-                sodiumMg: 1150,
-                fiberG: 4.2,
-              },
-              {
-                name: '酸辣肥牛粉',
-                legacyName: 'Hot and Sour Beef Rice Noodles',
-                price: 16,
-                caloriesKcal: 720,
-                proteinG: 27,
-                fatG: 24,
-                carbG: 96,
-                sodiumMg: 1320,
-                fiberG: 3.8,
-              },
-              {
-                name: '菌菇鸡汤面',
-                legacyName: 'Mushroom Chicken Soup Noodles',
-                price: 14,
-                caloriesKcal: 610,
-                proteinG: 24,
-                fatG: 17,
-                carbG: 88,
-                sodiumMg: 980,
-                fiberG: 4.5,
-              },
-            ],
-          },
-          {
-            name: '第一食堂·快餐自选',
-            legacyName: 'First Canteen - Fast Combo',
-            latitude: 32.206101,
-            longitude: 118.717512,
-            dishes: [
-              {
-                name: '黑椒鸡腿饭',
-                legacyName: 'Black Pepper Chicken Leg Rice',
-                price: 18,
-                caloriesKcal: 760,
-                proteinG: 35,
-                fatG: 26,
-                carbG: 95,
-                sodiumMg: 1280,
-                fiberG: 5.3,
-              },
-              {
-                name: '土豆牛腩套餐',
-                legacyName: 'Braised Beef Brisket with Potato Set',
-                price: 19,
-                caloriesKcal: 780,
-                proteinG: 33,
-                fatG: 29,
-                carbG: 96,
-                sodiumMg: 1400,
-                fiberG: 5.1,
-              },
-              {
-                name: '香菇青菜盖浇饭',
-                legacyName: 'Mushroom and Greens Rice',
-                price: 13,
-                caloriesKcal: 620,
-                proteinG: 16,
-                fatG: 18,
-                carbG: 94,
-                sodiumMg: 860,
-                fiberG: 6.8,
-              },
-            ],
-          },
-        ],
+        stores: [],
       },
-    ],
-  },
-  {
-    name: '二食堂',
-    floors: [
       {
-        floorOrder: 1,
-        floorLabel: '1F',
-        stores: [
-          {
-            name: '第二食堂·铁板饭',
-            legacyName: 'Second Canteen - Teppanyaki Rice',
-            latitude: 32.205487,
-            longitude: 118.718451,
-            dishes: [
-              {
-                name: '照烧鸡排铁板饭',
-                legacyName: 'Teriyaki Chicken Steak Iron Plate Rice',
-                price: 20,
-                caloriesKcal: 840,
-                proteinG: 37,
-                fatG: 31,
-                carbG: 102,
-                sodiumMg: 1480,
-                fiberG: 4.7,
-              },
-              {
-                name: '黑胡椒牛柳铁板面',
-                legacyName: 'Black Pepper Beef Strips Iron Plate Noodles',
-                price: 21,
-                caloriesKcal: 860,
-                proteinG: 34,
-                fatG: 33,
-                carbG: 104,
-                sodiumMg: 1510,
-                fiberG: 4.1,
-              },
-              {
-                name: '孜然鸡丁铁板饭',
-                legacyName: 'Cumin Chicken Dice Iron Plate Rice',
-                price: 18,
-                caloriesKcal: 780,
-                proteinG: 32,
-                fatG: 27,
-                carbG: 97,
-                sodiumMg: 1320,
-                fiberG: 4.4,
-              },
-            ],
-          },
-          {
-            name: '第二食堂·轻食能量碗',
-            legacyName: 'Second Canteen - Light Energy Bowl',
-            latitude: 32.205731,
-            longitude: 118.718197,
-            dishes: [
-              {
-                name: '鸡胸肉藜麦能量碗',
-                legacyName: 'Chicken Breast Quinoa Power Bowl',
-                price: 22,
-                caloriesKcal: 510,
-                proteinG: 38,
-                fatG: 14,
-                carbG: 52,
-                sodiumMg: 680,
-                fiberG: 8.6,
-              },
-              {
-                name: '牛肉时蔬全麦碗',
-                legacyName: 'Beef and Veg Whole Wheat Bowl',
-                price: 24,
-                caloriesKcal: 560,
-                proteinG: 35,
-                fatG: 18,
-                carbG: 58,
-                sodiumMg: 740,
-                fiberG: 9.1,
-              },
-              {
-                name: '金枪鱼玉米沙拉碗',
-                legacyName: 'Tuna Corn Salad Bowl',
-                price: 21,
-                caloriesKcal: 470,
-                proteinG: 29,
-                fatG: 16,
-                carbG: 49,
-                sodiumMg: 620,
-                fiberG: 7.3,
-              },
-            ],
-          },
-        ],
+        floorOrder: 2,
+        floorLabel: '2F',
+        stores: [],
+      },
+      {
+        floorOrder: 3,
+        floorLabel: '3F',
+        stores: [],
       },
     ],
   },
@@ -245,115 +83,39 @@ const canteensSeed: CanteenSeed[] = [
 
 const outdoorStoresSeed: OutdoorStoreSeed[] = [
   {
-    name: '北门早餐铺',
-    legacyName: 'North Gate Breakfast Stall',
-    area: '北门',
-    latitude: 32.209386,
-    longitude: 118.715984,
+    name: '禾香嫂重庆泡脚米线',
+    area: '东苑',
+    latitude: 32.206746,
+    longitude: 118.721014,
     dishes: [
       {
-        name: '豆浆 + 鸡蛋灌饼',
-        legacyName: 'Soy Milk + Egg Pancake',
-        price: 9,
-        caloriesKcal: 460,
-        proteinG: 16,
-        fatG: 17,
-        carbG: 62,
-        sodiumMg: 720,
-        fiberG: 2.7,
+        name: '冰豆花',
+        price: 2,
+        caloriesKcal: 120,
+        proteinG: 3.5,
+        fatG: 2.8,
+        carbG: 22,
+        sodiumMg: 80,
+        fiberG: 0.6,
       },
       {
-        name: '皮蛋瘦肉粥 + 小笼包',
-        legacyName: 'Pork Congee + Soup Dumplings',
-        price: 10,
-        caloriesKcal: 510,
-        proteinG: 20,
-        fatG: 14,
-        carbG: 74,
-        sodiumMg: 890,
-        fiberG: 2.2,
-      },
-      {
-        name: '牛肉锅贴 + 豆腐脑',
-        legacyName: 'Beef Potstickers + Tofu Pudding',
-        price: 11,
-        caloriesKcal: 540,
-        proteinG: 22,
-        fatG: 19,
-        carbG: 68,
-        sodiumMg: 970,
-        fiberG: 2.4,
-      },
-    ],
-  },
-  {
-    name: '东门麻辣烫',
-    legacyName: 'East Gate Mala Tang',
-    area: '东门',
-    latitude: 32.204872,
-    longitude: 118.720934,
-    dishes: [
-      {
-        name: '微辣牛肉麻辣烫',
-        legacyName: 'Mild Spicy Beef Mala Tang',
-        price: 20,
-        caloriesKcal: 690,
-        proteinG: 30,
-        fatG: 22,
-        carbG: 86,
-        sodiumMg: 1620,
-        fiberG: 6.1,
-      },
-      {
-        name: '番茄浓汤麻辣烫',
-        legacyName: 'Tomato Broth Mala Tang',
-        price: 19,
-        caloriesKcal: 650,
-        proteinG: 26,
-        fatG: 20,
-        carbG: 84,
-        sodiumMg: 1410,
-        fiberG: 6.4,
-      },
-      {
-        name: '菌菇清汤麻辣烫',
-        legacyName: 'Mushroom Clear Broth Mala Tang',
-        price: 18,
+        name: '碗杂面',
+        price: 12,
         caloriesKcal: 610,
-        proteinG: 24,
+        proteinG: 19,
         fatG: 17,
-        carbG: 82,
-        sodiumMg: 1280,
-        fiberG: 7.2,
+        carbG: 93,
+        sodiumMg: 1450,
+        fiberG: 4.3,
       },
     ],
   },
   {
-    name: '不如麻浪烫',
-    legacyName: 'Buruma Mala Tang',
-    area: '东门',
-    latitude: 32.205128,
-    longitude: 118.720412,
-    dishes: [
-      {
-        name: '麻辣烫',
-        legacyName: 'Mala Tang',
-        price: 20,
-        caloriesKcal: 450,
-        proteinG: 28,
-        fatG: 13,
-        carbG: 52,
-        sodiumMg: 1370,
-        fiberG: 5.5,
-      },
-    ],
-  },
-  {
-    name: '李煲长',
-    legacyName: 'Li Bao Zhang',
+    name: '李煲长鲜煲黄焖鸡',
+    legacyName: '李煲长',
     area: '北门',
-    latitude: 32.208941,
-    longitude: 118.716808,
+    latitude: 32.206713,
+    longitude: 118.720821,
     dishes: [
       {
         name: '黄焖鸡米饭',
@@ -380,7 +142,9 @@ function compactCandidates(...values: Array<string | undefined>): string[] {
   );
 }
 
-async function upsertStoreDishes(storeId: string, dishes: DishSeed[]): Promise<void> {
+async function upsertStoreDishes(storeId: string, dishes: DishSeed[]): Promise<string[]> {
+  const keepDishIds: string[] = [];
+
   for (const dishSeed of dishes) {
     const dishNameCandidates = compactCandidates(dishSeed.name, dishSeed.legacyName);
 
@@ -408,10 +172,11 @@ async function upsertStoreDishes(storeId: string, dishes: DishSeed[]): Promise<v
           isAvailable: true,
         },
       });
+      keepDishIds.push(existingDish.id);
       continue;
     }
 
-    await prisma.storeDish.create({
+    const createdDish = await prisma.storeDish.create({
       data: {
         storeId,
         name: dishSeed.name,
@@ -425,8 +190,29 @@ async function upsertStoreDishes(storeId: string, dishes: DishSeed[]): Promise<v
         fiberG: dishSeed.fiberG,
         isAvailable: true,
       },
+      select: { id: true },
     });
+
+    keepDishIds.push(createdDish.id);
   }
+
+  if (keepDishIds.length === 0) {
+    await prisma.storeDish.deleteMany({
+      where: {
+        storeId,
+      },
+    });
+    return keepDishIds;
+  }
+
+  await prisma.storeDish.deleteMany({
+    where: {
+      storeId,
+      id: { notIn: keepDishIds },
+    },
+  });
+
+  return keepDishIds;
 }
 
 type UpsertCampusStoreInput = {
@@ -442,7 +228,12 @@ type UpsertCampusStoreInput = {
   dishes: DishSeed[];
 };
 
-async function upsertCampusStore(input: UpsertCampusStoreInput): Promise<void> {
+type UpsertCampusStoreResult = {
+  id: string;
+  dishIds: string[];
+};
+
+async function upsertCampusStore(input: UpsertCampusStoreInput): Promise<UpsertCampusStoreResult> {
   const storeNameCandidates = compactCandidates(input.name, input.legacyName);
   const areaCandidates = compactCandidates(input.area, ...(input.fallbackAreas ?? []));
 
@@ -482,6 +273,7 @@ async function upsertCampusStore(input: UpsertCampusStoreInput): Promise<void> {
           longitude: input.longitude,
           isOpen: true,
         },
+        select: { id: true },
       })
     : await prisma.campusStore.create({
         data: {
@@ -494,9 +286,67 @@ async function upsertCampusStore(input: UpsertCampusStoreInput): Promise<void> {
           longitude: input.longitude,
           isOpen: true,
         },
+        select: { id: true },
       });
 
-  await upsertStoreDishes(store.id, input.dishes);
+  const keepDishIds = await upsertStoreDishes(store.id, input.dishes);
+
+  return {
+    id: store.id,
+    dishIds: keepDishIds,
+  };
+}
+
+async function clearUnmentionedData(input: {
+  keepStoreIds: Set<string>;
+  keepFloorIds: Set<string>;
+  keepCanteenIds: Set<string>;
+  keepDishIds: Set<string>;
+}): Promise<void> {
+  const keepStoreIds = Array.from(input.keepStoreIds);
+  const keepFloorIds = Array.from(input.keepFloorIds);
+  const keepCanteenIds = Array.from(input.keepCanteenIds);
+  const keepDishIds = Array.from(input.keepDishIds);
+
+  if (keepStoreIds.length > 0) {
+    await prisma.campusStore.deleteMany({
+      where: {
+        id: { notIn: keepStoreIds },
+      },
+    });
+  } else {
+    await prisma.campusStore.deleteMany({});
+  }
+
+  if (keepFloorIds.length > 0) {
+    await prisma.canteenFloor.deleteMany({
+      where: {
+        id: { notIn: keepFloorIds },
+      },
+    });
+  } else {
+    await prisma.canteenFloor.deleteMany({});
+  }
+
+  if (keepCanteenIds.length > 0) {
+    await prisma.campusCanteen.deleteMany({
+      where: {
+        id: { notIn: keepCanteenIds },
+      },
+    });
+  } else {
+    await prisma.campusCanteen.deleteMany({});
+  }
+
+  if (keepDishIds.length > 0) {
+    await prisma.storeDish.deleteMany({
+      where: {
+        id: { notIn: keepDishIds },
+      },
+    });
+  } else {
+    await prisma.storeDish.deleteMany({});
+  }
 }
 
 async function main(): Promise<void> {
@@ -517,6 +367,11 @@ async function main(): Promise<void> {
     },
   });
 
+  const keepCanteenIds = new Set<string>();
+  const keepFloorIds = new Set<string>();
+  const keepStoreIds = new Set<string>();
+  const keepDishIds = new Set<string>();
+
   for (const canteenSeed of canteensSeed) {
     const canteen = await prisma.campusCanteen.upsert({
       where: {
@@ -527,12 +382,21 @@ async function main(): Promise<void> {
       },
       update: {
         name: canteenSeed.name,
+        latitude: canteenSeed.latitude,
+        longitude: canteenSeed.longitude,
       },
       create: {
         campusCode: defaultCampusCode,
         name: canteenSeed.name,
+        latitude: canteenSeed.latitude,
+        longitude: canteenSeed.longitude,
+      },
+      select: {
+        id: true,
       },
     });
+
+    keepCanteenIds.add(canteen.id);
 
     for (const floorSeed of canteenSeed.floors) {
       const floor = await prisma.canteenFloor.upsert({
@@ -550,10 +414,15 @@ async function main(): Promise<void> {
           floorOrder: floorSeed.floorOrder,
           floorLabel: floorSeed.floorLabel,
         },
+        select: {
+          id: true,
+        },
       });
 
+      keepFloorIds.add(floor.id);
+
       for (const storeSeed of floorSeed.stores) {
-        await upsertCampusStore({
+        const store = await upsertCampusStore({
           campusCode: defaultCampusCode,
           name: storeSeed.name,
           legacyName: storeSeed.legacyName,
@@ -565,12 +434,17 @@ async function main(): Promise<void> {
           floorId: floor.id,
           dishes: storeSeed.dishes,
         });
+
+        keepStoreIds.add(store.id);
+        for (const dishId of store.dishIds) {
+          keepDishIds.add(dishId);
+        }
       }
     }
   }
 
   for (const storeSeed of outdoorStoresSeed) {
-    await upsertCampusStore({
+    const store = await upsertCampusStore({
       campusCode: defaultCampusCode,
       name: storeSeed.name,
       legacyName: storeSeed.legacyName,
@@ -581,7 +455,23 @@ async function main(): Promise<void> {
       floorId: null,
       dishes: storeSeed.dishes,
     });
+
+    keepStoreIds.add(store.id);
+    for (const dishId of store.dishIds) {
+      keepDishIds.add(dishId);
+    }
   }
+
+  await clearUnmentionedData({
+    keepStoreIds,
+    keepFloorIds,
+    keepCanteenIds,
+    keepDishIds,
+  });
+
+  console.log(
+    `Seed completed. keepCanteens=${keepCanteenIds.size}, keepFloors=${keepFloorIds.size}, keepStores=${keepStoreIds.size}, keepDishes=${keepDishIds.size}`,
+  );
 }
 
 main()

@@ -18,17 +18,20 @@ public struct CampusStoreHomeView: View {
                 infoSection
             }
             .navigationTitle("校内店铺")
+            .task {
+                await viewModel.loadStoresIfNeeded()
+            }
         }
     }
 
     @ViewBuilder
     private var mapSection: some View {
         MapKitCampusStoreMapView(
-            stores: viewModel.stores,
+            markers: viewModel.markers,
             boundary: viewModel.campusBoundary,
             center: viewModel.campusCenter,
-            onSelectStore: { selected in
-                viewModel.selectedStore = selected
+            onSelectMarker: { selected in
+                viewModel.selectedMarker = selected
             },
             onLocationUpdate: { point in
                 viewModel.updateUserLocation(point)
@@ -45,10 +48,10 @@ public struct CampusStoreHomeView: View {
                 .font(.subheadline)
                 .foregroundStyle(viewModel.isUserInsideCampus ? .green : .secondary)
 
-            if let selected = viewModel.selectedStore {
-                StoreSummaryCard(store: selected)
+            if let selected = viewModel.selectedMarker {
+                MarkerSummaryCard(marker: selected)
             } else {
-                Text("点击地图上的店铺标注可查看详情。")
+                Text("点击地图上的标注可查看详情。")
                     .font(.footnote)
                     .foregroundStyle(.secondary)
             }
@@ -58,18 +61,21 @@ public struct CampusStoreHomeView: View {
     }
 }
 
-private struct StoreSummaryCard: View {
-    let store: CampusStore
+private struct MarkerSummaryCard: View {
+    let marker: CampusStoreMarker
 
     var body: some View {
         VStack(alignment: .leading, spacing: 6) {
-            Text(store.name)
+            Text(marker.title)
                 .font(.headline)
-            Text(store.area)
+
+            Text(marker.subtitle)
                 .font(.subheadline)
                 .foregroundStyle(.secondary)
-            Text("推荐：\(store.dishHint)")
+
+            Text(marker.kind == .canteen ? "类型：食堂" : "类型：独立店铺")
                 .font(.subheadline)
+                .foregroundStyle(marker.kind == .canteen ? .blue : .orange)
         }
         .padding()
         .background(Color.blue.opacity(0.08))
@@ -89,11 +95,22 @@ private extension CLLocationCoordinate2D {
     }
 }
 
+private extension CampusBoundary {
+    var rectangularOverlayCoordinates: [CLLocationCoordinate2D] {
+        [
+            CLLocationCoordinate2D(latitude: maxLatitude, longitude: minLongitude),
+            CLLocationCoordinate2D(latitude: maxLatitude, longitude: maxLongitude),
+            CLLocationCoordinate2D(latitude: minLatitude, longitude: maxLongitude),
+            CLLocationCoordinate2D(latitude: minLatitude, longitude: minLongitude)
+        ]
+    }
+}
+
 private struct MapKitCampusStoreMapView: UIViewRepresentable {
-    let stores: [CampusStore]
+    let markers: [CampusStoreMarker]
     let boundary: CampusBoundary
     let center: GeoPoint
-    let onSelectStore: (CampusStore?) -> Void
+    let onSelectMarker: (CampusStoreMarker?) -> Void
     let onLocationUpdate: (GeoPoint?) -> Void
 
     func makeUIView(context: Context) -> MKMapView {
@@ -102,6 +119,8 @@ private struct MapKitCampusStoreMapView: UIViewRepresentable {
         mapView.showsCompass = true
         mapView.showsScale = true
         mapView.showsUserLocation = true
+        mapView.showsBuildings = false
+        mapView.pointOfInterestFilter = .excludingAll
 
         let region = MKCoordinateRegion(
             center: center.coordinate2D,
@@ -109,14 +128,17 @@ private struct MapKitCampusStoreMapView: UIViewRepresentable {
         )
         mapView.setRegion(region, animated: false)
 
-        context.coordinator.installStores(on: mapView, stores: stores)
+        context.coordinator.installBoundaryOverlay(on: mapView, boundary: boundary)
+        context.coordinator.installMarkers(on: mapView, markers: markers)
         context.coordinator.requestWhenInUseAuthorization()
         context.coordinator.startLocationUpdates()
         return mapView
     }
 
     func updateUIView(_ mapView: MKMapView, context: Context) {
-        context.coordinator.syncStores(on: mapView, stores: stores)
+        context.coordinator.updateParent(self)
+        context.coordinator.syncBoundaryOverlay(on: mapView, boundary: boundary)
+        context.coordinator.syncMarkers(on: mapView, markers: markers)
     }
 
     func makeCoordinator() -> Coordinator {
@@ -126,7 +148,9 @@ private struct MapKitCampusStoreMapView: UIViewRepresentable {
     final class Coordinator: NSObject, MKMapViewDelegate, CLLocationManagerDelegate {
         private var parent: MapKitCampusStoreMapView
         private let locationManager = CLLocationManager()
-        private var annotationsByID: [UUID: CampusStoreAnnotation] = [:]
+        private var annotationsByID: [String: CampusStoreMarkerAnnotation] = [:]
+        private var boundaryOverlay: MKPolygon?
+        private var renderedBoundary: CampusBoundary?
         private var isRecentering = false
 
         init(parent: MapKitCampusStoreMapView) {
@@ -136,27 +160,55 @@ private struct MapKitCampusStoreMapView: UIViewRepresentable {
             locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
         }
 
-        func installStores(on mapView: MKMapView, stores: [CampusStore]) {
-            let annotations = stores.map(CampusStoreAnnotation.init)
-            annotationsByID = Dictionary(uniqueKeysWithValues: annotations.map { ($0.store.id, $0) })
+        func updateParent(_ parent: MapKitCampusStoreMapView) {
+            self.parent = parent
+        }
+
+        func installBoundaryOverlay(on mapView: MKMapView, boundary: CampusBoundary) {
+            if let boundaryOverlay {
+                mapView.removeOverlay(boundaryOverlay)
+            }
+
+            var coordinates = overlayCoordinates(for: boundary)
+            let overlay = MKPolygon(coordinates: &coordinates, count: coordinates.count)
+            mapView.addOverlay(overlay)
+            boundaryOverlay = overlay
+            renderedBoundary = boundary
+        }
+
+        func syncBoundaryOverlay(on mapView: MKMapView, boundary: CampusBoundary) {
+            guard renderedBoundary != boundary else { return }
+            installBoundaryOverlay(on: mapView, boundary: boundary)
+        }
+
+        private func overlayCoordinates(for boundary: CampusBoundary) -> [CLLocationCoordinate2D] {
+            if boundary == NUISTCampusRegion.boundary {
+                return NUISTCampusRegion.outline.map(\.coordinate2D)
+            }
+            return boundary.rectangularOverlayCoordinates
+        }
+
+        func installMarkers(on mapView: MKMapView, markers: [CampusStoreMarker]) {
+            let annotations = markers.map(CampusStoreMarkerAnnotation.init)
+            annotationsByID = Dictionary(uniqueKeysWithValues: annotations.map { ($0.marker.id, $0) })
             mapView.addAnnotations(annotations)
         }
 
-        func syncStores(on mapView: MKMapView, stores: [CampusStore]) {
-            let targetIDs = Set(stores.map(\.id))
+        func syncMarkers(on mapView: MKMapView, markers: [CampusStoreMarker]) {
+            let targetIDs = Set(markers.map(\.id))
             let currentIDs = Set(annotationsByID.keys)
             let removedIDs = currentIDs.subtracting(targetIDs)
-            let addedStores = stores.filter { !currentIDs.contains($0.id) }
+            let addedMarkers = markers.filter { !currentIDs.contains($0.id) }
 
             if !removedIDs.isEmpty {
                 let removedAnnotations = removedIDs.compactMap { annotationsByID.removeValue(forKey: $0) }
                 mapView.removeAnnotations(removedAnnotations)
             }
 
-            if !addedStores.isEmpty {
-                let addedAnnotations = addedStores.map(CampusStoreAnnotation.init)
+            if !addedMarkers.isEmpty {
+                let addedAnnotations = addedMarkers.map(CampusStoreMarkerAnnotation.init)
                 for annotation in addedAnnotations {
-                    annotationsByID[annotation.store.id] = annotation
+                    annotationsByID[annotation.marker.id] = annotation
                 }
                 mapView.addAnnotations(addedAnnotations)
             }
@@ -197,6 +249,7 @@ private struct MapKitCampusStoreMapView: UIViewRepresentable {
 
         func mapView(_ mapView: MKMapView, viewFor annotation: any MKAnnotation) -> MKAnnotationView? {
             guard !(annotation is MKUserLocation) else { return nil }
+            guard let markerAnnotation = annotation as? CampusStoreMarkerAnnotation else { return nil }
 
             let identifier = "CampusStorePin"
             let view: MKMarkerAnnotationView
@@ -206,18 +259,33 @@ private struct MapKitCampusStoreMapView: UIViewRepresentable {
             } else {
                 view = MKMarkerAnnotationView(annotation: annotation, reuseIdentifier: identifier)
             }
+
             view.canShowCallout = true
-            view.markerTintColor = .systemPurple
+            view.markerTintColor = markerAnnotation.marker.kind == .canteen ? .systemBlue : .systemOrange
             return view
         }
 
+        func mapView(_ mapView: MKMapView, rendererFor overlay: any MKOverlay) -> MKOverlayRenderer {
+            guard let polygon = overlay as? MKPolygon else {
+                return MKOverlayRenderer(overlay: overlay)
+            }
+
+            let renderer = MKPolygonRenderer(polygon: polygon)
+            renderer.strokeColor = UIColor.systemBlue
+            renderer.fillColor = UIColor.systemBlue.withAlphaComponent(0.10)
+            renderer.lineWidth = 2
+            renderer.lineDashPattern = [7, 5]
+            return renderer
+        }
+
         func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-            guard let annotation = view.annotation as? CampusStoreAnnotation else { return }
-            parent.onSelectStore(annotation.store)
+            guard let annotation = view.annotation as? CampusStoreMarkerAnnotation else { return }
+            parent.onSelectMarker(annotation.marker)
         }
 
         func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
-            parent.onSelectStore(nil)
+            guard view.annotation is CampusStoreMarkerAnnotation else { return }
+            parent.onSelectMarker(nil)
         }
 
         func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
@@ -235,21 +303,21 @@ private struct MapKitCampusStoreMapView: UIViewRepresentable {
     }
 }
 
-private final class CampusStoreAnnotation: NSObject, MKAnnotation {
-    let store: CampusStore
+private final class CampusStoreMarkerAnnotation: NSObject, MKAnnotation {
+    let marker: CampusStoreMarker
     dynamic var coordinate: CLLocationCoordinate2D
 
     var title: String? {
-        store.name
+        marker.title
     }
 
     var subtitle: String? {
-        "\(store.area) · \(store.dishHint)"
+        marker.subtitle
     }
 
-    init(store: CampusStore) {
-        self.store = store
-        self.coordinate = store.coordinate.coordinate2D
+    init(marker: CampusStoreMarker) {
+        self.marker = marker
+        self.coordinate = marker.coordinate.coordinate2D
         super.init()
     }
 }

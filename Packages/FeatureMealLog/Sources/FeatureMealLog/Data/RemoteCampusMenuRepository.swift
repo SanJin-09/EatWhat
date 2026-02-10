@@ -13,12 +13,16 @@ public actor RemoteCampusMenuRepository: CampusMenuRepository {
         self.init(client: URLSessionNetworkClient(baseURL: baseURL, session: session))
     }
 
-    public func fetchStores(campusId: String) async throws -> [CampusStoreOption] {
+    public func fetchStoreHierarchy(campusId: String) async throws -> CampusStoreHierarchyOption {
         let path = CampusMenuAPIContract.storesPathTemplate
             .replacingOccurrences(of: "{campusId}", with: campusId)
         let request = NetworkRequest(path: path, method: .get)
-        let stores = try await decodeStores(request)
-        return stores.map { $0.toDomain(campusId: campusId) }
+        return try await decodeStoreHierarchy(request, campusId: campusId)
+    }
+
+    public func fetchStores(campusId: String) async throws -> [CampusStoreOption] {
+        let hierarchy = try await fetchStoreHierarchy(campusId: campusId)
+        return hierarchy.flattenedStores
     }
 
     public func fetchDishes(storeId: UUID) async throws -> [CampusDishOption] {
@@ -29,20 +33,26 @@ public actor RemoteCampusMenuRepository: CampusMenuRepository {
         return dishes.map { $0.toDomain() }
     }
 
-    private func decodeStores(_ request: NetworkRequest) async throws -> [CampusStoreDTO] {
+    private func decodeStoreHierarchy(_ request: NetworkRequest, campusId: String) async throws -> CampusStoreHierarchyOption {
         let data = try await client.data(for: request)
         let decoder = Self.makeDecoder()
 
         if let hierarchy = try? decoder.decode(CampusStoreHierarchyEnvelopeDTO.self, from: data) {
-            return hierarchy.flattenedStores
+            return hierarchy.toDomain(campusId: campusId)
         }
 
         if let bareArray = try? decoder.decode([CampusStoreDTO].self, from: data) {
-            return bareArray
+            return CampusStoreHierarchyOption(
+                canteens: [],
+                outdoorStores: bareArray.map { $0.toDomain(campusId: campusId) }
+            )
         }
 
         let wrapped = try decoder.decode(StoreEnvelope.self, from: data)
-        return wrapped.stores
+        return CampusStoreHierarchyOption(
+            canteens: [],
+            outdoorStores: wrapped.stores.map { $0.toDomain(campusId: campusId) }
+        )
     }
 
     private func decodeDishes(_ request: NetworkRequest) async throws -> [CampusDishDTO] {

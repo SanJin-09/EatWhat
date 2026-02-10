@@ -74,15 +74,21 @@ public struct CanteenFloorDTO: Codable, Sendable {
 public struct CampusCanteenDTO: Codable, Sendable {
     public let id: UUID
     public let name: String
+    public let latitude: Double?
+    public let longitude: Double?
     public let floors: [CanteenFloorDTO]
 
     public init(
         id: UUID,
         name: String,
+        latitude: Double? = nil,
+        longitude: Double? = nil,
         floors: [CanteenFloorDTO]
     ) {
         self.id = id
         self.name = name
+        self.latitude = latitude
+        self.longitude = longitude
         self.floors = floors
     }
 }
@@ -163,6 +169,35 @@ public extension CampusStoreDTO {
 }
 
 public extension CampusStoreHierarchyEnvelopeDTO {
+    func toDomain(campusId: String) -> CampusStoreHierarchyOption {
+        let canteenOptions = canteens.map { canteen in
+            CampusCanteenOption(
+                id: canteen.id,
+                campusId: campusId,
+                name: canteen.name,
+                coordinate: {
+                    guard let latitude = canteen.latitude, let longitude = canteen.longitude else {
+                        return nil
+                    }
+                    return CampusCoordinate(latitude: latitude, longitude: longitude)
+                }(),
+                floors: canteen.floors.map { floor in
+                    CampusCanteenFloorOption(
+                        id: floor.id,
+                        floorOrder: floor.floorOrder,
+                        floorLabel: floor.floorLabel,
+                        stores: floor.stores.map { $0.toDomain(campusId: campusId) }
+                    )
+                }
+            )
+        }
+
+        return CampusStoreHierarchyOption(
+            canteens: canteenOptions,
+            outdoorStores: outdoorStores.map { $0.toDomain(campusId: campusId) }
+        )
+    }
+
     var flattenedStores: [CampusStoreDTO] {
         let canteenStores = canteens.flatMap { canteen in
             canteen.floors.flatMap { floor in

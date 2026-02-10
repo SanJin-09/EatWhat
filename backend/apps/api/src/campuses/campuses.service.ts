@@ -25,6 +25,8 @@ type FloorResponseItem = {
 type CanteenResponseItem = {
   id: string;
   name: string;
+  latitude: number | null;
+  longitude: number | null;
   floors: FloorResponseItem[];
 };
 
@@ -39,6 +41,27 @@ export class CampusesService {
 
   async listStores(campusId: string): Promise<CampusStoresResponse> {
     const normalizedCampusId = campusId.trim();
+
+    const canteens = await this.prisma.campusCanteen.findMany({
+      where: {
+        campusCode: normalizedCampusId,
+      },
+      orderBy: [{ name: 'asc' }],
+      select: {
+        id: true,
+        name: true,
+        latitude: true,
+        longitude: true,
+        floors: {
+          orderBy: [{ floorOrder: 'asc' }],
+          select: {
+            id: true,
+            floorOrder: true,
+            floorLabel: true,
+          },
+        },
+      },
+    });
 
     const canteenStores = await this.prisma.campusStore.findMany({
       where: {
@@ -62,6 +85,8 @@ export class CampusesService {
               select: {
                 id: true,
                 name: true,
+                latitude: true,
+                longitude: true,
               },
             },
           },
@@ -85,7 +110,36 @@ export class CampusesService {
       },
     });
 
-    const canteenMap = new Map<string, { id: string; name: string; floorMap: Map<string, FloorResponseItem> }>();
+    const canteenMap = new Map<
+      string,
+      {
+        id: string;
+        name: string;
+        latitude: number | null;
+        longitude: number | null;
+        floorMap: Map<string, FloorResponseItem>;
+      }
+    >();
+
+    for (const canteen of canteens) {
+      canteenMap.set(canteen.id, {
+        id: canteen.id,
+        name: canteen.name,
+        latitude: canteen.latitude === null ? null : Number(canteen.latitude),
+        longitude: canteen.longitude === null ? null : Number(canteen.longitude),
+        floorMap: new Map(
+          canteen.floors.map((floor) => [
+            floor.id,
+            {
+              id: floor.id,
+              floorOrder: floor.floorOrder,
+              floorLabel: floor.floorLabel,
+              stores: [],
+            },
+          ]),
+        ),
+      });
+    }
 
     for (const store of canteenStores) {
       if (!store.floor) {
@@ -100,6 +154,8 @@ export class CampusesService {
         canteenMap.set(canteenId, {
           id: canteenId,
           name: canteenName,
+          latitude: store.floor.canteen.latitude === null ? null : Number(store.floor.canteen.latitude),
+          longitude: store.floor.canteen.longitude === null ? null : Number(store.floor.canteen.longitude),
           floorMap: new Map<string, FloorResponseItem>(),
         });
       }
@@ -139,11 +195,18 @@ export class CampusesService {
     }
 
     return {
-      canteens: Array.from(canteenMap.values()).map((canteen) => ({
-        id: canteen.id,
-        name: canteen.name,
-        floors: Array.from(canteen.floorMap.values()),
-      })),
+      canteens: Array.from(canteenMap.values())
+        .sort((lhs, rhs) => lhs.name.localeCompare(rhs.name, 'zh-Hans-CN'))
+        .map((canteen) => ({
+          id: canteen.id,
+          name: canteen.name,
+          latitude: canteen.latitude,
+          longitude: canteen.longitude,
+          floors: Array.from(canteen.floorMap.values()).sort(
+            (lhs, rhs) =>
+              lhs.floorOrder - rhs.floorOrder || lhs.floorLabel.localeCompare(rhs.floorLabel, 'en'),
+          ),
+        })),
       outdoorStores: outdoorStores.map((store) => ({
         id: store.id,
         name: store.name,

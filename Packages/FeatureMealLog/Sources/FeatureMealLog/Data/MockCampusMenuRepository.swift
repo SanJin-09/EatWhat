@@ -5,6 +5,7 @@ public actor MockCampusMenuRepository: CampusMenuRepository {
     public static let nuistCampusID = "nuist"
 
     private let campusId: String
+    private let hierarchy: CampusStoreHierarchyOption
     private let stores: [CampusStoreOption]
     private let dishesByStoreID: [UUID: [CampusDishOption]]
 
@@ -18,50 +19,102 @@ public actor MockCampusMenuRepository: CampusMenuRepository {
         let eastGardenLightMealID = UUID(uuidString: "63D6E8B7-C85A-499D-814D-BD83F3A89F84")!
         let westGardenMalaTangID = UUID(uuidString: "B4933D26-07D7-45EC-B704-B4A8B97A62D4")!
 
-        stores = [
-            CampusStoreOption(
-                id: firstCanteenNoodleID,
-                campusId: campusId,
-                name: "一食堂米线档",
-                area: "一食堂",
-                coordinate: CampusCoordinate(latitude: 32.2050, longitude: 118.7168)
-            ),
-            CampusStoreOption(
-                id: secondCanteenRiceID,
-                campusId: campusId,
-                name: "二食堂盖浇饭",
-                area: "二食堂",
-                coordinate: CampusCoordinate(latitude: 32.2077, longitude: 118.7204)
-            ),
-            CampusStoreOption(
-                id: halalWindowID,
-                campusId: campusId,
-                name: "清真窗口",
-                area: "三食堂",
-                coordinate: CampusCoordinate(latitude: 32.2104, longitude: 118.7222)
-            ),
-            CampusStoreOption(
-                id: northGateBreakfastID,
-                campusId: campusId,
-                name: "北门早餐铺",
-                area: "北门生活区",
-                coordinate: CampusCoordinate(latitude: 32.2132, longitude: 118.7177)
-            ),
-            CampusStoreOption(
-                id: eastGardenLightMealID,
-                campusId: campusId,
-                name: "东苑轻食店",
-                area: "东苑",
-                coordinate: CampusCoordinate(latitude: 32.2037, longitude: 118.7268)
-            ),
-            CampusStoreOption(
-                id: westGardenMalaTangID,
-                campusId: campusId,
-                name: "西苑麻辣烫",
-                area: "西苑",
-                coordinate: CampusCoordinate(latitude: 32.2020, longitude: 118.7116)
-            )
-        ]
+        let firstCanteenNoodleStore = CampusStoreOption(
+            id: firstCanteenNoodleID,
+            campusId: campusId,
+            name: "一食堂米线档",
+            area: "一食堂 1F",
+            coordinate: CampusCoordinate(latitude: 32.2050, longitude: 118.7168)
+        )
+        let secondCanteenRiceStore = CampusStoreOption(
+            id: secondCanteenRiceID,
+            campusId: campusId,
+            name: "二食堂盖浇饭",
+            area: "二食堂 1F",
+            coordinate: CampusCoordinate(latitude: 32.2077, longitude: 118.7204)
+        )
+        let halalWindowStore = CampusStoreOption(
+            id: halalWindowID,
+            campusId: campusId,
+            name: "清真窗口",
+            area: "三食堂 1F",
+            coordinate: CampusCoordinate(latitude: 32.2104, longitude: 118.7222)
+        )
+        let northGateBreakfastStore = CampusStoreOption(
+            id: northGateBreakfastID,
+            campusId: campusId,
+            name: "北门早餐铺",
+            area: "北门生活区",
+            coordinate: CampusCoordinate(latitude: 32.2132, longitude: 118.7177)
+        )
+        let eastGardenLightMealStore = CampusStoreOption(
+            id: eastGardenLightMealID,
+            campusId: campusId,
+            name: "东苑轻食店",
+            area: "东苑",
+            coordinate: CampusCoordinate(latitude: 32.2037, longitude: 118.7268)
+        )
+        let westGardenMalaTangStore = CampusStoreOption(
+            id: westGardenMalaTangID,
+            campusId: campusId,
+            name: "西苑麻辣烫",
+            area: "西苑",
+            coordinate: CampusCoordinate(latitude: 32.2020, longitude: 118.7116)
+        )
+
+        hierarchy = CampusStoreHierarchyOption(
+            canteens: [
+                CampusCanteenOption(
+                    id: UUID(uuidString: "F8EC8A4E-731E-4206-BD5B-8E7889C2844A")!,
+                    campusId: campusId,
+                    name: "一食堂",
+                    coordinate: CampusCoordinate(latitude: 32.2051, longitude: 118.7169),
+                    floors: [
+                        CampusCanteenFloorOption(
+                            id: UUID(uuidString: "C8168A96-129B-4ECB-8E00-F7B7BF8CBAC2")!,
+                            floorOrder: 1,
+                            floorLabel: "1F",
+                            stores: [firstCanteenNoodleStore]
+                        )
+                    ]
+                ),
+                CampusCanteenOption(
+                    id: UUID(uuidString: "E8DE5189-D22A-4EFE-A685-3559F5C04025")!,
+                    campusId: campusId,
+                    name: "二食堂",
+                    coordinate: CampusCoordinate(latitude: 32.2076, longitude: 118.7203),
+                    floors: [
+                        CampusCanteenFloorOption(
+                            id: UUID(uuidString: "95DFD09E-90CC-4E62-9AEF-04D7F128CA08")!,
+                            floorOrder: 1,
+                            floorLabel: "1F",
+                            stores: [secondCanteenRiceStore]
+                        )
+                    ]
+                ),
+                CampusCanteenOption(
+                    id: UUID(uuidString: "017012AF-8ADB-4A53-A334-8D3AA722A098")!,
+                    campusId: campusId,
+                    name: "三食堂",
+                    coordinate: CampusCoordinate(latitude: 32.2103, longitude: 118.7221),
+                    floors: [
+                        CampusCanteenFloorOption(
+                            id: UUID(uuidString: "CC10507D-B029-4977-B18A-6E3D82460477")!,
+                            floorOrder: 1,
+                            floorLabel: "1F",
+                            stores: [halalWindowStore]
+                        )
+                    ]
+                )
+            ],
+            outdoorStores: [
+                northGateBreakfastStore,
+                eastGardenLightMealStore,
+                westGardenMalaTangStore,
+            ]
+        )
+
+        stores = hierarchy.flattenedStores
 
         dishesByStoreID = [
             firstCanteenNoodleID: [
@@ -245,6 +298,14 @@ public actor MockCampusMenuRepository: CampusMenuRepository {
                 )
             ]
         ]
+    }
+
+    public func fetchStoreHierarchy(campusId: String) async throws -> CampusStoreHierarchyOption {
+        guard campusId == self.campusId else {
+            throw CampusMenuDomainError.unsupportedCampus
+        }
+
+        return hierarchy
     }
 
     public func fetchStores(campusId: String) async throws -> [CampusStoreOption] {

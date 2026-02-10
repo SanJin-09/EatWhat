@@ -32,6 +32,66 @@ public struct CampusStoreOption: Identifiable, Equatable, Codable, Sendable {
     }
 }
 
+public struct CampusCanteenFloorOption: Identifiable, Equatable, Codable, Sendable {
+    public let id: UUID
+    public let floorOrder: Int
+    public let floorLabel: String
+    public let stores: [CampusStoreOption]
+
+    public init(
+        id: UUID,
+        floorOrder: Int,
+        floorLabel: String,
+        stores: [CampusStoreOption]
+    ) {
+        self.id = id
+        self.floorOrder = floorOrder
+        self.floorLabel = floorLabel
+        self.stores = stores
+    }
+}
+
+public struct CampusCanteenOption: Identifiable, Equatable, Codable, Sendable {
+    public let id: UUID
+    public let campusId: String
+    public let name: String
+    public let coordinate: CampusCoordinate?
+    public let floors: [CampusCanteenFloorOption]
+
+    public init(
+        id: UUID,
+        campusId: String,
+        name: String,
+        coordinate: CampusCoordinate?,
+        floors: [CampusCanteenFloorOption]
+    ) {
+        self.id = id
+        self.campusId = campusId
+        self.name = name
+        self.coordinate = coordinate
+        self.floors = floors
+    }
+}
+
+public struct CampusStoreHierarchyOption: Equatable, Codable, Sendable {
+    public let canteens: [CampusCanteenOption]
+    public let outdoorStores: [CampusStoreOption]
+
+    public init(
+        canteens: [CampusCanteenOption],
+        outdoorStores: [CampusStoreOption]
+    ) {
+        self.canteens = canteens
+        self.outdoorStores = outdoorStores
+    }
+
+    public var flattenedStores: [CampusStoreOption] {
+        canteens.flatMap { canteen in
+            canteen.floors.flatMap(\.stores)
+        } + outdoorStores
+    }
+}
+
 public struct CampusDishOption: Identifiable, Equatable, Codable, Sendable {
     public let id: UUID
     public let storeId: UUID
@@ -72,6 +132,7 @@ public enum CampusMenuDomainError: Error, LocalizedError, Equatable {
 }
 
 public protocol CampusMenuRepository: Sendable {
+    func fetchStoreHierarchy(campusId: String) async throws -> CampusStoreHierarchyOption
     func fetchStores(campusId: String) async throws -> [CampusStoreOption]
     func fetchDishes(storeId: UUID) async throws -> [CampusDishOption]
 }
