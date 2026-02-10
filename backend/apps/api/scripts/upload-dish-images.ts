@@ -22,6 +22,31 @@ function requiredEnv(name: string): string {
   return value;
 }
 
+function requiredAreaArg(argv: string[]): string {
+  for (let index = 0; index < argv.length; index += 1) {
+    const token = argv[index];
+    if (token === '--area') {
+      const value = argv[index + 1]?.trim();
+      if (value) {
+        return value;
+      }
+      break;
+    }
+
+    if (token.startsWith('--area=')) {
+      const value = token.slice('--area='.length).trim();
+      if (value) {
+        return value;
+      }
+      break;
+    }
+  }
+
+  throw new Error(
+    'Missing required argument --area. Example: npm run media:upload -- --area \"一食堂 1F\"',
+  );
+}
+
 function buildPrismaClient(): PrismaClient {
   const connectionString = requiredEnv('DATABASE_URL');
   return new PrismaClient({
@@ -105,6 +130,7 @@ async function main(): Promise<void> {
   const bucket = requiredEnv('MEDIA_BUCKET');
   const campusCode = process.env.CAMPUS_CODE?.trim() || 'nuist';
   const imagesDir = process.env.DISH_IMAGES_DIR?.trim() || path.resolve(process.cwd(), 'assets/dishes');
+  const targetArea = requiredAreaArg(process.argv.slice(2));
 
   await ensureBucketExists(s3, bucket);
 
@@ -137,21 +163,40 @@ async function main(): Promise<void> {
         continue;
       }
 
-      const store = await prisma.campusStore.findFirst({
+      const matchedStores = await prisma.campusStore.findMany({
         where: {
           campusCode,
           name: mapping.storeName,
         },
         select: {
           id: true,
+          area: true,
         },
       });
 
-      if (!store) {
+      const exactStores = matchedStores.filter((store) => store.area === targetArea);
+
+      if (exactStores.length === 0) {
         skipped += 1;
-        console.warn(`Store not found: ${mapping.storeName}`);
+        if (matchedStores.length === 0) {
+          console.error(`Store not found: ${mapping.storeName} (campus=${campusCode}, area=${targetArea})`);
+        } else {
+          const candidates = matchedStores.map((item) => `${item.id}:${item.area}`).join(', ');
+          console.error(
+            `Store area mismatch: ${mapping.storeName} (requested area=${targetArea}). Candidates => ${candidates}`,
+          );
+        }
         continue;
       }
+
+      if (exactStores.length > 1) {
+        skipped += 1;
+        const candidates = exactStores.map((item) => `${item.id}:${item.area}`).join(', ');
+        console.error(`Store match is ambiguous: ${mapping.storeName} / ${targetArea}. Candidates => ${candidates}`);
+        continue;
+      }
+
+      const store = exactStores[0];
 
       const dish = await prisma.storeDish.findFirst({
         where: {

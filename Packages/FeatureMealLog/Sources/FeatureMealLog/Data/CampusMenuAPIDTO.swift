@@ -7,10 +7,21 @@ public enum CampusMenuAPIContract {
     public static let createMealLogPath = "/meal-logs"
 }
 
+public enum StoreLocationTypeDTO: String, Codable, Sendable {
+    case canteen = "CANTEEN"
+    case outdoor = "OUTDOOR"
+}
+
 public struct CampusStoreDTO: Codable, Sendable {
     public let id: UUID
     public let name: String
     public let area: String
+    public let locationType: StoreLocationTypeDTO
+    public let canteenId: UUID?
+    public let canteenName: String?
+    public let floorId: UUID?
+    public let floorOrder: Int?
+    public let floorLabel: String?
     public let latitude: Double
     public let longitude: Double
 
@@ -18,14 +29,74 @@ public struct CampusStoreDTO: Codable, Sendable {
         id: UUID,
         name: String,
         area: String,
+        locationType: StoreLocationTypeDTO = .outdoor,
+        canteenId: UUID? = nil,
+        canteenName: String? = nil,
+        floorId: UUID? = nil,
+        floorOrder: Int? = nil,
+        floorLabel: String? = nil,
         latitude: Double,
         longitude: Double
     ) {
         self.id = id
         self.name = name
         self.area = area
+        self.locationType = locationType
+        self.canteenId = canteenId
+        self.canteenName = canteenName
+        self.floorId = floorId
+        self.floorOrder = floorOrder
+        self.floorLabel = floorLabel
         self.latitude = latitude
         self.longitude = longitude
+    }
+}
+
+public struct CanteenFloorDTO: Codable, Sendable {
+    public let id: UUID
+    public let floorOrder: Int
+    public let floorLabel: String
+    public let stores: [CampusStoreDTO]
+
+    public init(
+        id: UUID,
+        floorOrder: Int,
+        floorLabel: String,
+        stores: [CampusStoreDTO]
+    ) {
+        self.id = id
+        self.floorOrder = floorOrder
+        self.floorLabel = floorLabel
+        self.stores = stores
+    }
+}
+
+public struct CampusCanteenDTO: Codable, Sendable {
+    public let id: UUID
+    public let name: String
+    public let floors: [CanteenFloorDTO]
+
+    public init(
+        id: UUID,
+        name: String,
+        floors: [CanteenFloorDTO]
+    ) {
+        self.id = id
+        self.name = name
+        self.floors = floors
+    }
+}
+
+public struct CampusStoreHierarchyEnvelopeDTO: Codable, Sendable {
+    public let canteens: [CampusCanteenDTO]
+    public let outdoorStores: [CampusStoreDTO]
+
+    public init(
+        canteens: [CampusCanteenDTO],
+        outdoorStores: [CampusStoreDTO]
+    ) {
+        self.canteens = canteens
+        self.outdoorStores = outdoorStores
     }
 }
 
@@ -88,6 +159,48 @@ public extension CampusStoreDTO {
             area: area,
             coordinate: CampusCoordinate(latitude: latitude, longitude: longitude)
         )
+    }
+}
+
+public extension CampusStoreHierarchyEnvelopeDTO {
+    var flattenedStores: [CampusStoreDTO] {
+        let canteenStores = canteens.flatMap { canteen in
+            canteen.floors.flatMap { floor in
+                floor.stores.map { store in
+                    CampusStoreDTO(
+                        id: store.id,
+                        name: store.name,
+                        area: store.area,
+                        locationType: .canteen,
+                        canteenId: store.canteenId ?? canteen.id,
+                        canteenName: store.canteenName ?? canteen.name,
+                        floorId: store.floorId ?? floor.id,
+                        floorOrder: store.floorOrder ?? floor.floorOrder,
+                        floorLabel: store.floorLabel ?? floor.floorLabel,
+                        latitude: store.latitude,
+                        longitude: store.longitude
+                    )
+                }
+            }
+        }
+
+        let normalizedOutdoorStores = outdoorStores.map { store in
+            CampusStoreDTO(
+                id: store.id,
+                name: store.name,
+                area: store.area,
+                locationType: .outdoor,
+                canteenId: nil,
+                canteenName: nil,
+                floorId: nil,
+                floorOrder: nil,
+                floorLabel: nil,
+                latitude: store.latitude,
+                longitude: store.longitude
+            )
+        }
+
+        return canteenStores + normalizedOutdoorStores
     }
 }
 

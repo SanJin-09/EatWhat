@@ -13,6 +13,11 @@ enum MealType {
   SNACK
 }
 
+enum StoreLocationType {
+  CANTEEN
+  OUTDOOR
+}
+
 model Campus {
   code      String   @id @db.VarChar(32) // 例如: nuist
   name      String
@@ -22,8 +27,9 @@ model Campus {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  stores CampusStore[]
-  users  User[]
+  stores   CampusStore[]
+  canteens CampusCanteen[]
+  users    User[]
 }
 
 model User {
@@ -45,6 +51,8 @@ model CampusStore {
   campusCode String   @db.VarChar(32)
   name       String
   area       String
+  locationType StoreLocationType @default(OUTDOOR)
+  floorId      String?           @db.Uuid
   latitude   Decimal  @db.Decimal(9, 6)
   longitude  Decimal  @db.Decimal(9, 6)
   isOpen     Boolean  @default(true)
@@ -52,6 +60,7 @@ model CampusStore {
   updatedAt  DateTime @updatedAt
 
   campus   Campus        @relation(fields: [campusCode], references: [code], onDelete: Restrict, onUpdate: Cascade)
+  floor    CanteenFloor? @relation(fields: [floorId], references: [id], onDelete: SetNull, onUpdate: Cascade)
   dishes   StoreDish[]
   mealLogs MealLog[]
   reviews  StoreReview[]
@@ -59,7 +68,40 @@ model CampusStore {
   @@unique([campusCode, name, area])
   @@index([campusCode])
   @@index([campusCode, name])
+  @@index([campusCode, locationType])
+  @@index([floorId])
   @@index([latitude, longitude])
+}
+
+model CampusCanteen {
+  id         String   @id @default(uuid()) @db.Uuid
+  campusCode String   @db.VarChar(32)
+  name       String
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  campus Campus        @relation(fields: [campusCode], references: [code], onDelete: Restrict, onUpdate: Cascade)
+  floors CanteenFloor[]
+
+  @@unique([campusCode, name])
+  @@index([campusCode])
+}
+
+model CanteenFloor {
+  id         String   @id @default(uuid()) @db.Uuid
+  canteenId  String   @db.Uuid
+  floorOrder Int
+  floorLabel String
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  canteen CampusCanteen @relation(fields: [canteenId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  stores  CampusStore[]
+
+  @@unique([canteenId, floorOrder])
+  @@unique([canteenId, floorLabel])
+  @@index([canteenId])
+  @@index([canteenId, floorOrder])
 }
 
 model StoreDish {

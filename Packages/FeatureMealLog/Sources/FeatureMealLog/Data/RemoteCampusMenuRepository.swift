@@ -33,6 +33,10 @@ public actor RemoteCampusMenuRepository: CampusMenuRepository {
         let data = try await client.data(for: request)
         let decoder = Self.makeDecoder()
 
+        if let hierarchy = try? decoder.decode(CampusStoreHierarchyEnvelopeDTO.self, from: data) {
+            return hierarchy.flattenedStores
+        }
+
         if let bareArray = try? decoder.decode([CampusStoreDTO].self, from: data) {
             return bareArray
         }
